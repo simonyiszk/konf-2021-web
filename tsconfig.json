@@ -17,6 +17,12 @@
 		"isolatedModules": true,
 		"jsx": "preserve"
 	},
-	"include": ["*.config.js", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
+	"include": [
+		"*.config.js",
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		"./getContentfulEnvironment.js"
+	],
 	"exclude": ["node_modules"]
 }
