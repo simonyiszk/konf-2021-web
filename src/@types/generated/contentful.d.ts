@@ -19,11 +19,11 @@ export interface IPresentationFields {
 	/** Date */
 	date: string;
 
-	/** Description */
-	description: Document;
-
 	/** Link */
 	link: string;
+
+	/** Description */
+	description: string;
 }
 
 /** Describes the preview and also the opened presentation component. */

@@ -31,6 +31,7 @@
 		"@next/bundle-analyzer": "^10.0.5",
 		"babel-plugin-optimize-clsx": "^2.6.1",
 		"clsx": "^1.1.1",
+		"contentful": "^8.1.7",
 		"contentful-management": "^7.5.2",
 		"dotenv": "^8.2.0",
 		"next": "^10.0.5",
