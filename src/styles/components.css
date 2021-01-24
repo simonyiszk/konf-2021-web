@@ -1,11 +1,22 @@
 @import "fonts.css";
 
-html {
+html,
+body {
 	@apply text-white;
+	@apply bg-blue;
 }
 
-#header {
-	margin-bottom: -1px;
+#hero-text {
+}
+#hero-number {
+	font-size: 22rem;
+	line-height: 0.7375;
+}
+#hero-simonyi {
+	font-size: 10rem;
+}
+#hero-konf {
+	font-size: 6.2rem;
 }
 
 /* Utilities */
@@ -31,4 +42,12 @@ html {
 		-webkit-backdrop-filter: blur(5px);
 		backdrop-filter: blur(5px);
 	}
+}
+
+.w-fit {
+	width: fit-content;
+}
+
+.border-t-3 {
+	border-top-width: 3px;
 }
