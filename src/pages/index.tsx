@@ -16,6 +16,10 @@ export const getStaticProps: GetStaticProps<{
 				? process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
 				: process.env.NEXT_PUBLIC_CONTENTFUL_PREVIEW_ACCESS_TOKEN) ??
 			"ErrorNoAccessToken",
+		host:
+			process.env.VERCEL_ENV === "production"
+				? "cdn.contentful.com"
+				: "preview.contentful.com",
 	});
 
 	function orderEntriesByDate(
@@ -46,11 +50,12 @@ export default function HomePage({
 				{Array(4)
 					// eslint-disable-next-line etc/no-assign-mutated-array
 					.fill(entries[0])
-					.map((entry) => {
+					.map((entry, i) => {
 						return (
 							<>
 								<PresentationCard
-									key={entry.sys.id}
+									// eslint-disable-next-line react/no-array-index-key
+									key={entry.sys.id + i}
 									{...entry.fields}
 									imageURL={entry.fields.image.fields.file.url}
 								/>
