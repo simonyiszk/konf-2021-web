@@ -35,7 +35,7 @@ export default function Footer() {
 						/>
 					</a>
 				</div>
-				<p className="text-gray-400 text-xs">
+				<p className="text-gray-700 text-xs">
 					© Simonyi Károly Szakkollégium 2021
 				</p>
 			</div>

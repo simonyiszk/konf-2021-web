@@ -51,3 +51,7 @@ body {
 .border-t-3 {
 	border-top-width: 3px;
 }
+
+.leading-0 {
+	line-height: 0;
+}
