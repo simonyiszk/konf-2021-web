@@ -16,6 +16,18 @@ module.exports = {
 				darker:
 					"0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15)",
 			},
+			fontSize: {
+				"hero-simonyi": "3.85rem",
+				"hero-konf": "2.4rem",
+				"hero-simonyi-sm": "5.5rem",
+				"hero-konf-sm": "3.4rem",
+				"hero-simonyi-md": "6.85rem",
+				"hero-konf-md": "4.25rem",
+				"hero-simonyi-lg": "8.9rem",
+				"hero-konf-lg": "5.5rem",
+				"hero-simonyi-xl": "10rem",
+				"hero-konf-xl": "6.2rem",
+			},
 		},
 	},
 	variants: {

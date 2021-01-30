@@ -47,22 +47,15 @@ export default function HomePage({
 		<Layout>
 			<Hero />
 			<section className="container grid gap-8 grid-cols-1 justify-items-center mx-auto p-3 lg:grid-cols-2">
-				{Array(4)
-					// eslint-disable-next-line etc/no-assign-mutated-array
-					.fill(entries[0])
-					.map((entry, i) => {
-						return (
-							<>
-								<PresentationCard
-									// eslint-disable-next-line react/no-array-index-key
-									key={entry.sys.id + i}
-									{...entry.fields}
-									imageURL={entry.fields.image.fields.file.url}
-								/>
-							</>
-						);
-					})}
-				{JSON.stringify(entries[0].fields)}
+				{entries.map((entry) => {
+					return (
+						<PresentationCard
+							key={entry.sys.id}
+							{...entry.fields}
+							imageURL={entry.fields.image.fields.file.url}
+						/>
+					);
+				})}
 			</section>
 		</Layout>
 	);

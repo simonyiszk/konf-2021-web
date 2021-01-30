@@ -1,4 +1,4 @@
-export type PresentationCardProps = {
+type PresentationCardProps = {
 	title: string;
 	name: string;
 	date: string;

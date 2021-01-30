@@ -1,5 +1,3 @@
-@import "fonts.css";
-
 html,
 body {
 	@apply text-white;
@@ -7,16 +5,17 @@ body {
 }
 
 #hero-text {
+	grid-template-columns: max-content auto;
 }
 #hero-number {
-	font-size: 22rem;
-	line-height: 0.7375;
 }
 #hero-simonyi {
-	font-size: 10rem;
 }
 #hero-konf {
-	font-size: 6.2rem;
+}
+
+#hero-date {
+	grid-template-columns: auto max-content auto;
 }
 
 /* Utilities */
