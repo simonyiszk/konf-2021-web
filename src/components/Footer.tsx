@@ -9,14 +9,14 @@ export default function Footer() {
 			<div className="container flex flex-col items-center justify-center mx-auto space-y-6">
 				<div className="flex items-center justify-evenly w-full lg:w-1/3">
 					<a
-						href="https://www.instagram.com/schdesign.hu/"
+						href="https://www.instagram.com/simonyikonf/"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						<FaInstagram className="w-10 h-auto hover:text-blue text-blue-dark" />
 					</a>
 					<a
-						href="https://www.facebook.com/schonherzdesignstudio/"
+						href="https://www.facebook.com/simonyiszk"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -32,7 +32,7 @@ export default function Footer() {
 				</div>
 				<div className="flex items-center justify-center">
 					<a
-						href="http://simonyi.bme.hu"
+						href="https://simonyi.bme.hu"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
