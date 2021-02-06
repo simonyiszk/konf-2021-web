@@ -2,7 +2,7 @@ import { createClient, Entry } from "contentful";
 import type { GetStaticProps, InferGetStaticPropsType } from "next";
 
 import type { IPresentationFields } from "@/@types/generated/contentful";
-import Hero from "@/components/Hero";
+import Hero from "@/components/decorations/Hero";
 import Layout from "@/components/Layout";
 import PresentationCard from "@/components/presentations/PresentationCard";
 
@@ -60,3 +60,6 @@ export default function HomePage({
 		</Layout>
 	);
 }
+
+export const thisIsAnUnusedExport =
+	"this export only exists to disable fast refresh for this file";

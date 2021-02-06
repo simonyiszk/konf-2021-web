@@ -9,7 +9,7 @@ export default function Navbar() {
 	const [navbarOpen, setNavbarOpen] = React.useState(false);
 	return (
 		<header
-			className="navbar-expand-sm fixed z-40 top-0 flex flex-wrap items-center justify-between mb-3 w-screen text-white bg-blue"
+			className="fixed z-40 top-0 flex flex-wrap items-center justify-between mb-3 w-screen text-white"
 			id="header"
 		>
 			<div className="relative flex flex-wrap items-center mx-auto p-4 w-full sm:p-8">
