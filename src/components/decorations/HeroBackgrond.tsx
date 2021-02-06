@@ -1,4 +1,4 @@
-import { DottedCircle, FatLine } from "./Decorations";
+import { DottedCircle, FatLine, SmallCircle } from "./Decorations";
 
 export default function HeroBackground() {
 	return (
@@ -26,6 +26,21 @@ export default function HeroBackground() {
 			{/* Top */}
 
 			{/* Top Left */}
+
+			<SmallCircle style={{ left: "3rem", top: "8rem" }} className="absolute" />
+			<SmallCircle
+				style={{ left: "6.5rem", top: "8rem" }}
+				className="absolute"
+			/>
+			<SmallCircle
+				style={{ left: "6.5rem", top: "11.5rem" }}
+				className="absolute"
+			/>
+			<SmallCircle
+				style={{ left: "10rem", top: "11.5rem" }}
+				className="absolute"
+			/>
+
 			<div className="absolute top-96">
 				<FatLine color="yellow" className="absolute -left-20 top-64" />
 				<FatLine color="teal" className="absolute -left-32 top-32" />

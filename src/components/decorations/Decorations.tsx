@@ -95,12 +95,45 @@ export function DottedCircle({
 	);
 }
 
+export function SmallCircle({
+	color,
+	...props
+}: React.SVGProps<SVGSVGElement> & DecorationsColorProps) {
+	const { width } = props;
+	const rand = Math.random() * 4;
+	return (
+		<svg height="42" width="42" {...props}>
+			<motion.circle
+				cx="16"
+				cy="16"
+				r="13"
+				stroke={getColor(color ?? "yellow", false)}
+				fill="transparent"
+				strokeWidth="3"
+			/>
+			<motion.circle
+				r="13"
+				stroke={getColor(color ?? "yellow", false)}
+				fill={getColor(color ?? "yellow", false)}
+				strokeWidth="3"
+				animate={{ cx: [16, 23, 16], cy: [16, 23, 16] }}
+				transition={{
+					repeat: Infinity,
+					duration: 8,
+					ease: "backInOut",
+					delay: rand,
+				}}
+			/>
+		</svg>
+	);
+}
+
 export function Svg18({ ...props }: React.SVGProps<SVGSVGElement>) {
 	return (
-		<svg height="100%" width="100%" viewBox="0 0 500 500" {...props}>
+		<svg height="100%" width="100%" viewBox="-3 -3 506 506" {...props}>
 			<motion.path
 				stroke="white"
-				strokeWidth="2"
+				strokeWidth="3"
 				fill="transparent"
 				initial={{ pathLength: 0, fill: "rgba(255, 255, 255, 0)" }}
 				animate={{
@@ -116,7 +149,7 @@ export function Svg18({ ...props }: React.SVGProps<SVGSVGElement>) {
 			/>
 			<motion.path
 				stroke="white"
-				strokeWidth="2"
+				strokeWidth="3"
 				fill="transparent"
 				initial={{ pathLength: 0, fill: "rgba(255, 255, 255, 0)" }}
 				animate={{

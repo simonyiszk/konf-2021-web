@@ -21,26 +21,32 @@ export default function Hero() {
 							"sm:w-40 sm:h-40 md:w-52 md:h-52 lg:w-60 lg:h-60 xl:w-72 xl:h-72",
 						)}
 					/>
-					<h1
+					<motion.h1
 						className={clsx(
-							"col-span-2 self-center text-yellow text-hero-simonyi font-extrabold uppercase",
+							"relative col-span-2 self-center text-yellow text-hero-simonyi font-extrabold uppercase",
 							"self-end sm:col-span-1",
 							"sm:text-hero-simonyi-sm md:text-hero-simonyi-md lg:text-hero-simonyi-lg xl:text-hero-simonyi-xl",
 						)}
+						animate={{ opacity: 1, left: 0 }}
+						transition={{ delay: 2.5, duration: 2 }}
+						initial={{ opacity: 0, left: 300 }}
 						id="hero-simonyi"
 					>
 						Simonyi
-					</h1>
-					<h1
+					</motion.h1>
+					<motion.h1
 						className={clsx(
-							"col-span-2 self-center text-hero-konf font-light uppercase",
+							"relative col-span-2 self-center text-hero-konf font-light uppercase",
 							"self-start sm:col-span-1",
 							"sm:text-hero-konf-sm md:text-hero-konf-md lg:text-hero-konf-lg xl:text-hero-konf-xl",
 						)}
+						animate={{ opacity: 1, left: 0 }}
+						transition={{ delay: 3, duration: 1.5 }}
+						initial={{ opacity: 0, left: 300 }}
 						id="hero-konf"
 					>
 						Konferencia
-					</h1>
+					</motion.h1>
 					<div className="grid col-span-2 mt-8" id="hero-date">
 						<div className="self-center mx-3">
 							<motion.hr
@@ -52,12 +58,12 @@ export default function Hero() {
 						</div>
 						<motion.h2
 							className={clsx(
-								"mx-4 text-center font-Roboto text-2xl font-bold",
+								"relative mx-4 text-center text-2xl font-semibold",
 								"sm:text-3xl md:text-4xl lg:text-5xl",
 							)}
-							animate={{ opacity: 1 }}
+							animate={{ opacity: 1, top: 0 }}
 							transition={{ delay: 5, duration: 1 }}
-							initial={{ opacity: 0 }}
+							initial={{ opacity: 0, top: 30 }}
 						>
 							2021.04.14.
 						</motion.h2>
