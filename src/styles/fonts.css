@@ -1,31 +1,28 @@
 @font-face {
-	font-family: "Gotham Pro";
-	src: url("../../public/assets/fonts/GothamPro.eot");
-	src: url("../../public/assets/fonts/GothamPro.eot?#iefix")
-			format("embedded-opentype"),
-		url("../../public/assets/fonts/GothamPro.woff") format("woff"),
-		url("../../public/assets/fonts/GothamPro.ttf") format("truetype");
+	font-family: "Montserrat";
+	src: url("../../public/assets/fonts/Montserrat-Light.ttf") format("truetype");
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Montserrat";
+	src: url("../../public/assets/fonts/Montserrat-Regular.ttf")
+		format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
-	font-family: "Gotham Pro";
-	src: url("../../public/assets/fonts/GothamPro-Light.eot");
-	src: url("../../public/assets/fonts/GothamPro-Light.eot?#iefix")
-			format("embedded-opentype"),
-		url("../../public/assets/fonts/GothamPro-Light.woff") format("woff"),
-		url("../../public/assets/fonts/GothamPro-Light.ttf") format("truetype");
-	font-weight: lighter;
+	font-family: "Montserrat";
+	src: url("../../public/assets/fonts/Montserrat-SemiBold.ttf")
+		format("truetype");
+	font-weight: 600;
 	font-style: normal;
 }
 @font-face {
-	font-family: "Gotham Pro";
-	src: url("../../public/assets/fonts/GothamPro-Bold.eot");
-	src: url("../../public/assets/fonts/GothamPro-Bold.eot?#iefix")
-			format("embedded-opentype"),
-		url("../../public/assets/fonts/GothamPro-Bold.woff") format("woff"),
-		url("../../public/assets/fonts/GothamPro-Bold.ttf") format("truetype");
-	font-weight: bold;
+	font-family: "Montserrat";
+	src: url("../../public/assets/fonts/Montserrat-ExtraBold.ttf")
+		format("truetype");
+	font-weight: 800;
 	font-style: normal;
 }
 
@@ -33,5 +30,11 @@
 	font-family: "Roboto";
 	src: url("../../public/assets/fonts/Roboto-Regular.ttf") format("truetype");
 	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Roboto";
+	src: url("../../public/assets/fonts/Roboto-Bold.ttf") format("truetype");
+	font-weight: 700;
 	font-style: normal;
 }

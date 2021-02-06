@@ -7,10 +7,11 @@ module.exports = {
 				yellow: { DEFAULT: "#E6A537", dark: "#C6882E" },
 				teal: { DEFAULT: "#7FB3D7", dark: "#73A8C9" },
 				blue: { DEFAULT: "#273343", dark: "#1E2833" },
+				green: { DEFAULT: "#4BAF87", dark: "#419370" },
 			},
 			fontFamily: {
 				Roboto: "Roboto",
-				GothamPro: "Gotham Pro",
+				Montserrat: "Montserrat",
 			},
 			boxShadow: {
 				darker:
