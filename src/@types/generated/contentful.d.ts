@@ -18,6 +18,9 @@ export interface IOrganiserFields {
 
 	/** Order */
 	order: number;
+
+	/** Color */
+	color: "teal" | "red" | "green" | "yellow";
 }
 
 export interface IOrganiser extends Entry<IOrganiserFields> {
