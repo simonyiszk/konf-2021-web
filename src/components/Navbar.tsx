@@ -15,8 +15,8 @@ export default function Navbar() {
 			<div className="relative flex flex-wrap items-center mx-auto p-4 w-full sm:p-8">
 				<div className="relative flex justify-between w-full sm:static sm:block sm:justify-start sm:w-auto">
 					<Link href="/">
-						<a className="pr-8 no-underline text-4xl lg:text-7xl lg:leading-10">
-							18
+						<a className="block mr-8 w-10 no-underline text-4xl sm:w-16 lg:text-7xl lg:leading-10">
+							<img className="" src="assets/images/18.svg" alt="18" />
 						</a>
 					</Link>
 					<button
@@ -34,15 +34,15 @@ export default function Navbar() {
 					)}
 					id="navbar"
 				>
-					<ul className="flex flex-col font-Roboto list-none lowercase sm:flex-row sm:ml-auto sm:w-auto">
+					<ul className="bg-blur-10 flex flex-col font-Roboto rounded-lg list-none lowercase sm:flex-row sm:ml-auto sm:w-auto">
 						{navbarContent.links.map(({ href, label }, i) => (
 							<li key={`${href}`} className="pl-2 py-1 w-full sm:pl-0">
 								<Link href={href}>
 									<a
 										className={clsx(
-											"hover:text-pink inline-block py-2 w-full text-xl font-medium sm:px-5 sm:text-2xl",
-											i === 0 && "sm:pl-0",
-											i === navbarContent.links.length - 1 && "sm:pr-0",
+											"hover:text-pink inline-block px-2 py-2 w-full text-xl font-medium sm:px-5 sm:text-2xl",
+											i === 0 && "sm:pl-2",
+											i === navbarContent.links.length - 1 && "sm:pr-2",
 										)}
 									>
 										{label}

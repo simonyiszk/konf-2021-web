@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { motion } from "framer-motion";
 
 import { Svg18 } from "./Decorations";
-import HeroBackground from "./HeroBackgrond";
+import HeroBackground from "./HeroBackground";
 
 export default function Hero() {
 	return (
@@ -61,8 +61,8 @@ export default function Hero() {
 						</div>
 						<motion.h2
 							className={clsx(
-								"relative mx-4 text-center text-2xl font-semibold",
-								"sm:text-3xl md:text-4xl lg:text-5xl",
+								"relative mx-1 text-center text-3xl font-semibold",
+								"sm:mx-4 sm:text-3xl md:text-4xl lg:text-5xl",
 							)}
 							style={{ willChange: "top, opacity" }}
 							animate={{ opacity: 1, top: 0 }}
