@@ -1,27 +1,20 @@
-import { createClient, Entry } from "contentful";
+import type { Entry } from "contentful";
 import type { GetStaticProps, InferGetStaticPropsType } from "next";
 
-import type { IPresentationFields } from "@/@types/generated/contentful";
+import type {
+	IOrganiserFields,
+	IPresentationFields,
+} from "@/@types/generated/contentful";
+import Contacts from "@/components/Contacts";
 import Hero from "@/components/decorations/Hero";
 import Layout from "@/components/Layout";
 import PresentationCard from "@/components/presentations/PresentationCard";
+import { client } from "@/utils/contentful";
 
 export const getStaticProps: GetStaticProps<{
-	entries: Array<Entry<IPresentationFields>>;
+	organisers: Array<Entry<IOrganiserFields>>;
+	presentations: Array<Entry<IPresentationFields>>;
 }> = async () => {
-	const client = createClient({
-		space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID ?? "ErrorNoSpaceID",
-		accessToken:
-			(process.env.VERCEL_ENV === "production"
-				? process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
-				: process.env.NEXT_PUBLIC_CONTENTFUL_PREVIEW_ACCESS_TOKEN) ??
-			"ErrorNoAccessToken",
-		host:
-			process.env.VERCEL_ENV === "production"
-				? "cdn.contentful.com"
-				: "preview.contentful.com",
-	});
-
 	function orderEntriesByDate(
 		a: Entry<IPresentationFields>,
 		b: Entry<IPresentationFields>,
@@ -31,23 +24,32 @@ export const getStaticProps: GetStaticProps<{
 		return 0;
 	}
 
-	const allEntries = await client.getEntries<IPresentationFields>({
+	const presentations = await client.getEntries<IPresentationFields>({
 		content_type: "presentation",
 	});
 
-	allEntries.items.sort(orderEntriesByDate);
+	presentations.items.sort(orderEntriesByDate);
 
-	return { props: { entries: allEntries.items } };
+	const organisers = await client.getEntries<IOrganiserFields>({
+		content_type: "organiser",
+	});
+
+	organisers.items.sort((a, b) => a.fields.order - b.fields.order);
+
+	return {
+		props: { presentations: presentations.items, organisers: organisers.items },
+	};
 };
 
 export default function HomePage({
-	entries,
+	presentations,
+	organisers,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
 	return (
 		<Layout>
 			<Hero />
 			<section className="container grid gap-8 grid-cols-1 justify-items-center mx-auto p-3 lg:grid-cols-2">
-				{entries.map((entry) => {
+				{presentations.map((entry) => {
 					return (
 						<PresentationCard
 							key={entry.sys.id}
@@ -57,6 +59,7 @@ export default function HomePage({
 					);
 				})}
 			</section>
+			<Contacts organisers={organisers} />
 		</Layout>
 	);
 }
