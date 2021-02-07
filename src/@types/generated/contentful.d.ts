@@ -3,6 +3,40 @@
 import { Document } from "@contentful/rich-text-types";
 import { Asset, Entry } from "contentful";
 
+export interface IOrganiserFields {
+	/** Name */
+	name: string;
+
+	/** Title */
+	title: string;
+
+	/** Email */
+	email: string;
+
+	/** Image */
+	image: Asset;
+
+	/** Order */
+	order: number;
+}
+
+export interface IOrganiser extends Entry<IOrganiserFields> {
+	sys: {
+		id: string;
+		type: string;
+		createdAt: string;
+		updatedAt: string;
+		locale: string;
+		contentType: {
+			sys: {
+				id: "organiser";
+				linkType: "ContentType";
+				type: "Link";
+			};
+		};
+	};
+}
+
 export interface IPresentationFields {
 	/** Title */
 	title: string;
@@ -45,7 +79,7 @@ export interface IPresentation extends Entry<IPresentationFields> {
 	};
 }
 
-export type ContentType = "presentation";
+export type ContentType = "organiser" | "presentation";
 
 export type LocaleCode = "en-US";
 
