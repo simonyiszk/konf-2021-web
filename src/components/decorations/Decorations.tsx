@@ -59,6 +59,7 @@ export function FatLine({
 					ease: "backInOut",
 					delay: rand,
 				}}
+				style={{ willChange: "y, scale-x, rotation" }}
 			/>
 			<motion.line
 				x1={strokeWidth / 2}
@@ -90,6 +91,7 @@ export function DottedCircle({
 				strokeWidth="3"
 				animate={{ rotate: 360 }}
 				transition={{ repeat: Infinity, ease: "linear", duration: 90 + rand }}
+				style={{ willChange: "rotate" }}
 			/>
 		</svg>
 	);
@@ -123,6 +125,7 @@ export function SmallCircle({
 					ease: "backInOut",
 					delay: rand,
 				}}
+				style={{ willChange: "cx, cy" }}
 			/>
 		</svg>
 	);
@@ -145,6 +148,7 @@ export function Svg18({ ...props }: React.SVGProps<SVGSVGElement>) {
 					],
 				}}
 				transition={{ duration: 4, delay: 0 }}
+				style={{ willChange: "path-length, fill" }}
 				d="M0,29.1v147.3v147.3C0,405,65.9,470.9,147.3,470.9V323.6V176.4C147.3,95,81.3,29.1,0,29.1z"
 			/>
 			<motion.path
@@ -161,6 +165,7 @@ export function Svg18({ ...props }: React.SVGProps<SVGSVGElement>) {
 					],
 				}}
 				transition={{ duration: 4, delay: 1 }}
+				style={{ willChange: "path-length, fill" }}
 				d="M500,176.4C500,95,434.1,29.1,352.7,29.1c-81.3,0-147.3,65.9-147.3,147.3c0,26.8,7.2,52,19.7,73.6
 				c-12.5,21.7-19.7,46.8-19.7,73.6c0,81.3,65.9,147.3,147.3,147.3c81.3,0,147.3-65.9,147.3-147.3c0-26.8-7.2-52-19.7-73.6
 				C492.8,228.3,500,203.2,500,176.4z M352.4,378c-27.1,0-49.1-22-49.1-49.1s22-49.1,49.1-49.1c27.1,0,49.1,22,49.1,49.1

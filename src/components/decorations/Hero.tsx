@@ -27,6 +27,7 @@ export default function Hero() {
 							"self-end sm:col-span-1",
 							"sm:text-hero-simonyi-sm md:text-hero-simonyi-md lg:text-hero-simonyi-lg xl:text-hero-simonyi-xl",
 						)}
+						style={{ willChange: "left, opacity" }}
 						animate={{ opacity: 1, left: 0 }}
 						transition={{ delay: 2.5, duration: 2 }}
 						initial={{ opacity: 0, left: 300 }}
@@ -40,6 +41,7 @@ export default function Hero() {
 							"self-start sm:col-span-1",
 							"sm:text-hero-konf-sm md:text-hero-konf-md lg:text-hero-konf-lg xl:text-hero-konf-xl",
 						)}
+						style={{ willChange: "left, opacity" }}
 						animate={{ opacity: 1, left: 0 }}
 						transition={{ delay: 3, duration: 1.5 }}
 						initial={{ opacity: 0, left: 300 }}
@@ -50,6 +52,7 @@ export default function Hero() {
 					<div className="grid col-span-2 mt-8" id="hero-date">
 						<div className="self-center mx-3">
 							<motion.hr
+								style={{ willChange: "width" }}
 								className="border-t-3 rounded-full"
 								animate={{ width: "100%" }}
 								transition={{ delay: 4, duration: 2 }}
@@ -61,6 +64,7 @@ export default function Hero() {
 								"relative mx-4 text-center text-2xl font-semibold",
 								"sm:text-3xl md:text-4xl lg:text-5xl",
 							)}
+							style={{ willChange: "top, opacity" }}
 							animate={{ opacity: 1, top: 0 }}
 							transition={{ delay: 5, duration: 1 }}
 							initial={{ opacity: 0, top: 30 }}
@@ -69,6 +73,7 @@ export default function Hero() {
 						</motion.h2>
 						<div className="relative self-center mx-3">
 							<motion.hr
+								style={{ willChange: "width" }}
 								className="border-t-3 absolute right-0 rounded-full transform rotate-180"
 								animate={{ width: "100%" }}
 								transition={{ delay: 4, duration: 2 }}
