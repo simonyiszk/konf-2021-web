@@ -6,7 +6,10 @@ import HeroBackground from "./HeroBackground";
 
 export default function Hero() {
 	return (
-		<section className="relative w-full h-screen bg-blue" id="hero-container">
+		<section
+			className="relative w-full h-screen overflow-hidden"
+			id="hero-container"
+		>
 			<HeroBackground />
 
 			<div className="relative z-20 flex flex-col justify-center pt-8 h-full">

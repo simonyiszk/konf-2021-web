@@ -1,13 +1,21 @@
-import { FaFacebookSquare, FaInstagram, FaYoutube } from "react-icons/fa";
+import {
+	FaEnvelope,
+	FaFacebookSquare,
+	FaInstagram,
+	FaYoutube,
+} from "react-icons/fa";
 
 export default function Footer() {
 	return (
 		<footer
-			className="mt-8 p-8 w-full text-white bg-yellow rounded-t-2xl"
+			className="z-20 p-8 w-full text-white bg-yellow rounded-t-2xl"
 			id="footer"
 		>
 			<div className="container flex flex-col items-center justify-center mx-auto space-y-6">
 				<div className="flex items-center justify-evenly w-full lg:w-1/3">
+					<a href="mailto:konferencia@simonyi.bme.hu">
+						<FaEnvelope className="w-10 h-auto hover:text-blue text-blue-dark" />
+					</a>
 					<a
 						href="https://www.instagram.com/simonyikonf/"
 						target="_blank"
@@ -30,7 +38,7 @@ export default function Footer() {
 						<FaYoutube className="w-10 h-auto hover:text-blue text-blue-dark" />
 					</a>
 				</div>
-				<div className="flex items-center justify-center">
+				<div className="flex items-center justify-evenly w-full lg:w-1/3">
 					<a
 						href="https://simonyi.bme.hu"
 						target="_blank"
@@ -39,6 +47,17 @@ export default function Footer() {
 						<img
 							src="/assets/images/simonyi_color.svg"
 							alt="Simonyi Károly Szakkollégium"
+							className="w-auto h-16"
+						/>
+					</a>
+					<a
+						href="https://vik.bme.hu"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<img
+							src="/assets/images/VIK.svg"
+							alt="Villamosmérnöki és Informatikai Kar"
 							className="w-auto h-16"
 						/>
 					</a>

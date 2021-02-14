@@ -4,6 +4,9 @@ body {
 	@apply bg-blue;
 }
 
+#hero-background {
+}
+
 #hero-text {
 	grid-template-columns: max-content auto;
 }
@@ -16,6 +19,40 @@ body {
 
 #hero-date {
 	grid-template-columns: auto max-content auto;
+}
+
+#tr {
+	width: calc(50px * 2);
+}
+
+#tm {
+	width: calc(50px * 6);
+}
+
+#bl {
+	width: calc(50px * 5);
+}
+
+#br {
+	width: calc(50px * 7.25);
+}
+
+@media (min-width: 640px) {
+	#tr {
+		width: calc(75px * 2);
+	}
+
+	#tm {
+		width: calc(75px * 6);
+	}
+
+	#bl {
+		width: calc(75px * 5);
+	}
+
+	#br {
+		width: calc(75px * 7.25);
+	}
 }
 
 /* Utilities */
@@ -53,4 +90,8 @@ body {
 
 .leading-0 {
 	line-height: 0;
+}
+
+.-z-1 {
+	z-index: -1;
 }

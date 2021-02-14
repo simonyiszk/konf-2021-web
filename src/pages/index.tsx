@@ -48,7 +48,7 @@ export default function HomePage({
 	return (
 		<Layout>
 			<Hero />
-			<section className="container grid gap-8 grid-cols-1 justify-items-center mx-auto p-3 lg:grid-cols-2">
+			{/* <section className="container grid gap-8 grid-cols-1 justify-items-center mx-auto p-3 lg:grid-cols-2">
 				{presentations.map((entry) => {
 					return (
 						<PresentationCard
@@ -58,8 +58,8 @@ export default function HomePage({
 						/>
 					);
 				})}
-			</section>
-			<Contacts organisers={organisers} />
+			</section> */}
+			{/* <Contacts organisers={organisers} /> */}
 		</Layout>
 	);
 }

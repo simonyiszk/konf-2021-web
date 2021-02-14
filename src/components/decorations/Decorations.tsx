@@ -89,6 +89,7 @@ export function DottedCircle({
 				r={parseInt(width?.toString() ?? "40", 10) / 2 - 3} // AYYLMAO
 				stroke="white"
 				strokeWidth="3"
+				origin="center"
 				animate={{ rotate: 360 }}
 				transition={{ repeat: Infinity, ease: "linear", duration: 90 + rand }}
 				style={{ willChange: "rotate" }}
