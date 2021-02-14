@@ -1,9 +1,0 @@
-{
-	"build": {
-		"env": {
-			"NEXT_PUBLIC_CONTENTFUL_SPACE_ID": "@konf_contentful_space_id",
-			"NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN": "@konf_contentful_access_token",
-			"NEXT_PUBLIC_CONTENTFUL_PREVIEW_ACCESS_TOKEN": "@konf_contentful_preview_access_token"
-		}
-	}
-}
