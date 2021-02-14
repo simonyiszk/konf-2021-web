@@ -25,15 +25,15 @@ export default function Layout({
 				/>
 				<meta
 					name="twitter:image"
-					content="https://konferencia.simonyi.bme.hu/preview.png"
+					content="https://konf-2021-web.andrisborbas.vercel.app/preview.png" // TODO: Change after domain change
 				/>
 				<meta
 					name="thumbnail"
-					content="https://konferencia.simonyi.bme.hu/preview.png"
+					content="https://konf-2021-web.andrisborbas.vercel.app/preview.png"
 				/>
 				<meta
 					property="og:image"
-					content="https://konferencia.simonyi.bme.hu/preview.png"
+					content="https://konf-2021-web.andrisborbas.vercel.app/preview.png"
 				/>
 				<meta property="og:title" content="18. Simonyi Konferencia" />
 				<meta
