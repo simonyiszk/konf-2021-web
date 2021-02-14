@@ -78,7 +78,7 @@ export default function Footer() {
 						<g clipPath="url(#clip0)">
 							<path
 								d="M0 4C0 1.79086 1.79086 0 4 0H163.2C165.409 0 167.2 1.79086 167.2 4V28C167.2 30.2091 165.409 32 163.2 32H4C1.79086 32 0 30.2091 0 28V4Z"
-								fill="black"
+								fill="#1E2833"
 							/>
 							<path
 								fillRule="evenodd"
