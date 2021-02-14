@@ -15,30 +15,30 @@ export default function Layout({
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<meta
 					name="description"
-					content="Magyarország legnagyobb egyetemi hallgatók által szervezett éves technológiai konferenciája. Várunk Téged is április 14-én"
+					content="Magyarország legnagyobb egyetemi hallgatók által szervezett éves technológiai konferenciája. Várunk Téged is április 14-én."
 				/>
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:title" content="18. Simonyi Konferencia" />
 				<meta
 					name="twitter:description"
-					content="Magyarország legnagyobb egyetemi hallgatók által szervezett éves technológiai konferenciája. Várunk Téged is április 14-én"
+					content="Magyarország legnagyobb egyetemi hallgatók által szervezett éves technológiai konferenciája. Várunk Téged is április 14-én."
 				/>
 				<meta
 					name="twitter:image"
-					content="https://konf-2021-web.andrisborbas.vercel.app/preview.png" // TODO: Change after domain change
+					content="https://konf-2021-web.vercel.app/preview.png" // TODO: Change after domain change
 				/>
 				<meta
 					name="thumbnail"
-					content="https://konf-2021-web.andrisborbas.vercel.app/preview.png"
+					content="https://konf-2021-web.vercel.app/preview.png"
 				/>
 				<meta
 					property="og:image"
-					content="https://konf-2021-web.andrisborbas.vercel.app/preview.png"
+					content="https://konf-2021-web.vercel.app/preview.png"
 				/>
 				<meta property="og:title" content="18. Simonyi Konferencia" />
 				<meta
 					property="og:description"
-					content="Magyarország legnagyobb egyetemi hallgatók által szervezett éves technológiai konferenciája. Várunk Téged is április 14-én"
+					content="Magyarország legnagyobb egyetemi hallgatók által szervezett éves technológiai konferenciája. Várunk Téged is április 14-én."
 				/>
 				<meta property="og:url" content="https://konferencia.simonyi.bme.hu" />
 				<meta property="og:type" content="website" />
