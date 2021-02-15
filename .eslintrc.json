@@ -15,7 +15,7 @@
 		"prettier/react"
 	],
 	"plugins": ["simple-import-sort"],
-
+	"env": { "browser": true },
 	"rules": {
 		/* Auto-sort imports and exports */
 		"sort-imports": "off",
