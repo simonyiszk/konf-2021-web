@@ -24,7 +24,7 @@ export default function Footer() {
 						<FaInstagram className="w-10 h-auto hover:text-blue text-blue-dark" />
 					</a>
 					<a
-						href="https://www.facebook.com/simonyiszk"
+						href="https://fb.me/e/1ayaVpuDp"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
