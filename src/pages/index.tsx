@@ -63,6 +63,3 @@ export default function HomePage({
 		</Layout>
 	);
 }
-
-export const thisIsAnUnusedExport =
-	"this export only exists to disable fast refresh for this file";
