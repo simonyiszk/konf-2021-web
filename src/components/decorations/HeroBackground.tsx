@@ -1,4 +1,4 @@
-import { motion, SVGMotionProps } from "framer-motion";
+import { motion } from "framer-motion";
 import { FaAngleDown } from "react-icons/fa";
 
 import { DottedCircle, FatLine, SmallCircle } from "./Decorations";
