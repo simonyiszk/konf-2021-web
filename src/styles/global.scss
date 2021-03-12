@@ -1,0 +1,66 @@
+:root {
+	color-scheme: dark light;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	@apply text-white;
+	@apply bg-blue;
+	@apply min-h-screen;
+
+	margin: 0 auto;
+}
+
+#hero-background {
+}
+#hero-number {
+}
+#hero-simonyi {
+}
+#hero-konf {
+}
+
+#hero-text {
+	grid-template-columns: max-content auto;
+}
+
+#hero-date {
+	grid-template-columns: auto max-content auto;
+}
+
+#tr {
+	width: calc(50px * 2);
+}
+
+#tm {
+	width: calc(50px * 6);
+}
+
+#bl {
+	width: calc(50px * 5);
+}
+
+#br {
+	width: calc(50px * 7.25);
+}
+
+@media (min-width: 640px) {
+	#tr {
+		width: calc(75px * 2);
+	}
+
+	#tm {
+		width: calc(75px * 6);
+	}
+
+	#bl {
+		width: calc(75px * 5);
+	}
+
+	#br {
+		width: calc(75px * 7.25);
+	}
+}

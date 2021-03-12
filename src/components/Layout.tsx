@@ -2,6 +2,8 @@ import Head from "next/head";
 
 import Footer from "@/components/Footer";
 
+import Navbar from "./navbar/Navbar";
+
 export default function Layout({
 	children,
 }: {
@@ -24,7 +26,7 @@ export default function Layout({
 				/>
 				<meta
 					name="twitter:image"
-					content="https://konferencia.simonyi.bme.hu/preview.png" // TODO: Change after domain change
+					content="https://konferencia.simonyi.bme.hu/preview.png"
 				/>
 				<meta
 					name="thumbnail"
@@ -84,6 +86,8 @@ export default function Layout({
 				<meta name="msapplication-TileImage" content="/mstile-150x150.png" />
 				<meta name="theme-color" content="#E6A537" />
 			</Head>
+
+			{/* <Navbar /> */}
 
 			<main>{children}</main>
 

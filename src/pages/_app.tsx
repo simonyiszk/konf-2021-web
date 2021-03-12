@@ -1,7 +1,8 @@
-import "../styles/core.css";
-import "../styles/fonts.css";
-import "../styles/components.css";
-import "../styles/utilities.css";
+import "@/styles/core.css";
+import "@/styles/fonts.scss";
+import "@/styles/components.scss";
+import "@/styles/utilities.css";
+import "@/styles/global.scss";
 
 import type { AppProps, NextWebVitalsMetric } from "next/app";
 import { useRouter } from "next/router";
