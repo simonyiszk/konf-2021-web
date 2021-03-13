@@ -53,8 +53,11 @@ export interface IPresentationFields {
 	/** Image */
 	image: Asset;
 
-	/** Date */
-	date: string;
+	/** Start Date */
+	startDate: string;
+
+	/** End Date */
+	endDate: string;
 
 	/** Link */
 	link: string;

@@ -1,0 +1,44 @@
+.card {
+	@apply max-w-screen-sm;
+	@apply text-white;
+	@apply font-Roboto;
+	@apply bg-blue-dark;
+	@apply rounded-md;
+}
+
+.container {
+	@apply relative;
+	@apply p-3;
+	@apply grid;
+	@apply gap-4;
+	grid-template-columns: 4fr 6fr;
+	@apply items-center;
+}
+
+.image {
+	@apply w-full;
+	@apply rounded-full;
+}
+
+.caption {
+	h3 {
+		@apply mb-3;
+		@apply text-teal;
+		@apply text-xl;
+		@apply font-bold;
+	}
+	h4 {
+		@apply mb-1;
+		@apply uppercase;
+		@apply text-sm;
+	}
+	h5 {
+		@apply text-yellow;
+		@apply font-bold;
+	}
+}
+
+.content {
+	@apply col-span-2;
+	@apply mt-4;
+}

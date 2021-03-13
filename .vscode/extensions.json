@@ -4,6 +4,7 @@
 		"dbaeumer.vscode-eslint",
 		"editorconfig.editorconfig",
 		"esbenp.prettier-vscode",
-		"wayou.vscode-todo-highlight"
+		"wayou.vscode-todo-highlight",
+		"stylelint.vscode-stylelint"
 	]
 }
