@@ -16,13 +16,13 @@ export default function Navbar() {
 
 	React.useEffect(() => {
 		scrollY.onChange((latest: number) => {
-			if (latest >= 1) {
+			if (latest > 10) {
 				if (!isNavbarVisible) setNavbarVisible(true);
 			} else if (isNavbarVisible) setNavbarVisible(false);
 		});
 		return () => {};
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [scrollY]);
+	}, [scrollY, isNavbarVisible]);
 
 	return (
 		<motion.header
@@ -33,7 +33,7 @@ export default function Navbar() {
 		>
 			<div className="relative flex flex-wrap items-center justify-between mx-auto px-2 w-full sm:px-8">
 				<div className="relative flex justify-between w-full sm:static sm:block sm:justify-start sm:w-auto">
-					<Link href="/#">
+					<Link href="/">
 						<a className="flex items-center mr-2 no-underline text-2xl lg:text-4xl lg:leading-10">
 							<span className="relative inline-block mx-2 my-4 w-12 h-12">
 								<Image src="/18.svg" layout="fill" />

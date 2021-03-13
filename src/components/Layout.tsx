@@ -87,7 +87,7 @@ export default function Layout({
 				<meta name="theme-color" content="#E6A537" />
 			</Head>
 
-			{/* <Navbar /> */}
+			<Navbar />
 
 			<main>{children}</main>
 

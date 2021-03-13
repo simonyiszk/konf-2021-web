@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { motion } from "framer-motion";
 
 import { Svg18 } from "./Decorations";
+import styles from "./Hero.module.scss";
 import HeroBackground from "./HeroBackground";
 
 export default function Hero() {
@@ -84,6 +85,14 @@ export default function Hero() {
 							/>
 						</div>
 					</div>
+					<a
+						href="https://schdesign.hu"
+						target="_blank"
+						rel="noopener"
+						className={styles.button}
+					>
+						Regisztráció
+					</a>
 				</div>
 			</div>
 		</section>
