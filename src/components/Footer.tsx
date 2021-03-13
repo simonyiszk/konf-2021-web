@@ -7,10 +7,7 @@ import {
 
 export default function Footer() {
 	return (
-		<footer
-			className="z-20 p-8 w-full text-white bg-yellow rounded-t-2xl"
-			id="footer"
-		>
+		<footer className="z-20 p-8 w-full text-white bg-yellow" id="footer">
 			<div className="container flex flex-col items-center justify-center mx-auto space-y-6">
 				<div className="flex items-center justify-evenly w-full lg:w-1/3">
 					<a href="mailto:konferencia@simonyi.bme.hu">
