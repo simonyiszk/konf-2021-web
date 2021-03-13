@@ -85,14 +85,18 @@ export default function Hero() {
 							/>
 						</div>
 					</div>
-					<a
+					<motion.a
 						href="https://schdesign.hu"
 						target="_blank"
 						rel="noopener"
 						className={styles.button}
+						style={{ willChange: "top, opacity" }}
+						animate={{ opacity: 1, top: 0 }}
+						transition={{ delay: 5.33, duration: 1 }}
+						initial={{ opacity: 0, top: 30 }}
 					>
 						Regisztráció
-					</a>
+					</motion.a>
 				</div>
 			</div>
 		</section>

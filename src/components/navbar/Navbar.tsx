@@ -21,16 +21,17 @@ export default function Navbar() {
 			} else if (isNavbarVisible) setNavbarVisible(false);
 		});
 		return () => {};
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [scrollY, isNavbarVisible]);
 
 	function scrollToTop() {
+		setNavbarOpen(false);
 		window.scrollTo(0, 0);
 	}
 
 	return (
 		<motion.header
 			className={clsx(styles.header, "bg-blur-10")}
+			style={{ willChange: "top" }}
 			animate={{ top: isNavbarVisible ? 0 : -100 }}
 			initial={{ top: -100 }}
 			id="header"
