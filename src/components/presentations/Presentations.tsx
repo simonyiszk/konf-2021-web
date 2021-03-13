@@ -22,7 +22,7 @@ type PresentationsProps = {
 export default function Presentations({ presentations }: PresentationsProps) {
 	return (
 		<section
-			className="container grid gap-8 grid-cols-1 justify-items-center mx-auto p-3 lg:grid-cols-2"
+			className="container grid gap-8 grid-cols-1 justify-items-center mb-8 mx-auto p-3 lg:grid-cols-2"
 			id="eloadok"
 		>
 			{presentations.map((entry) => {

@@ -12,16 +12,19 @@ import styles from "./Navbar.module.scss";
 export default function Navbar() {
 	const [isNavbarOpen, setNavbarOpen] = React.useState(false);
 	const [isNavbarVisible, setNavbarVisible] = React.useState(false);
-	const { scrollY, scrollYProgress } = useViewportScroll();
+	const { scrollY } = useViewportScroll();
 
 	React.useEffect(() => {
 		scrollY.onChange((latest: number) => {
 			if (latest > 10) {
 				if (!isNavbarVisible) setNavbarVisible(true);
-			} else if (isNavbarVisible) setNavbarVisible(false);
+			} else {
+				if (isNavbarVisible) setNavbarVisible(false);
+				if (isNavbarOpen) setNavbarOpen(false);
+			}
 		});
 		return () => {};
-	}, [scrollY, isNavbarVisible]);
+	}, [scrollY, isNavbarVisible, isNavbarOpen]);
 
 	function scrollToTop() {
 		setNavbarOpen(false);

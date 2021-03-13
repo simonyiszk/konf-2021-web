@@ -7,14 +7,14 @@
 }
 
 .bg-blur-10 {
-	background-color: rgba(122, 122, 122, 0.66);
+	background-color: rgba(50, 50, 53, 0.66);
 	@supports (
 		(-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))
 	) {
 		opacity: 0.99;
-		background-color: rgba(150, 150, 150, 0.33);
-		-webkit-backdrop-filter: blur(10px);
-		backdrop-filter: blur(10px);
+		background-color: rgba(55, 55, 58, 0.33);
+		-webkit-backdrop-filter: blur(5px);
+		backdrop-filter: blur(5px);
 	}
 }
 
