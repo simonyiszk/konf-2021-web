@@ -24,6 +24,10 @@ export default function Navbar() {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [scrollY, isNavbarVisible]);
 
+	function scrollToTop() {
+		window.scrollTo(0, 0);
+	}
+
 	return (
 		<motion.header
 			className={clsx(styles.header, "bg-blur-10")}
@@ -33,13 +37,18 @@ export default function Navbar() {
 		>
 			<div className="relative flex flex-wrap items-center justify-between mx-auto px-2 w-full sm:px-8">
 				<div className="relative flex justify-between w-full sm:static sm:block sm:justify-start sm:w-auto">
-					<Link href="/">
-						<a className="flex items-center mr-2 no-underline text-2xl lg:text-4xl lg:leading-10">
-							<span className="relative inline-block mx-2 my-4 w-12 h-12">
-								<Image src="/18.svg" layout="fill" />
-							</span>
-						</a>
-					</Link>
+					<span
+						className="flex items-center mr-2 no-underline text-2xl cursor-pointer lg:text-4xl lg:leading-10"
+						onClick={scrollToTop}
+						onKeyPress={scrollToTop}
+						role="button"
+						tabIndex={0}
+					>
+						<span className="relative inline-block mx-2 my-4 w-12 h-12">
+							<Image src="/18.svg" layout="fill" />
+						</span>
+					</span>
+
 					<button
 						className="block px-3 py-2 text-xl leading-none bg-transparent border border-solid border-transparent rounded outline-none focus:outline-none cursor-pointer sm:hidden"
 						type="button"
