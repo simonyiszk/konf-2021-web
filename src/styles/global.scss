@@ -7,6 +7,8 @@ html {
 }
 
 body {
+	@apply text-yellow bg-yellow text-teal bg-teal text-green bg-green text-red bg-red text-blue bg-blue;
+
 	@apply text-white;
 	@apply bg-blue;
 	@apply min-h-screen;
