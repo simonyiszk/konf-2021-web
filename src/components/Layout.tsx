@@ -86,11 +86,8 @@ export default function Layout({
 				<meta name="msapplication-TileImage" content="/mstile-150x150.png" />
 				<meta name="theme-color" content="#E6A537" />
 			</Head>
-
-			<Navbar />
-
+			{/* <Navbar /> */} {/* F */}
 			<main>{children}</main>
-
 			<Footer />
 		</>
 	);

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import tinydate from "tinydate";
 
 import type { IPresentationFields } from "@/@types/generated/contentful";
@@ -25,7 +26,14 @@ export default function PresentationCard({
 	return (
 		<figure className={styles.card}>
 			<div className={styles.container}>
-				<img className={styles.image} src={imageURL} alt={name} />
+				<Image
+					className={styles.image}
+					src={`https:${imageURL}`}
+					alt={name}
+					width={208}
+					height={208}
+				/>
+
 				<figcaption className={styles.caption}>
 					<h3>{title}</h3>
 					<h4>
