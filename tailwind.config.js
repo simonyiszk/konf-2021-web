@@ -1,6 +1,6 @@
 module.exports = {
 	purge: {
-		content: ["./src/**/*.{js,ts,tsx,mdx}"],
+		content: ["./src/**/*.{js,jsx,ts,tsx,mdx,css,scss}"],
 		options: {
 			safelist: {
 				greedy: [
