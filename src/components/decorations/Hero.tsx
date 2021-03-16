@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { motion } from "framer-motion";
 
 import { Svg18 } from "./Decorations";
+import styles from "./Hero.module.scss";
 import HeroBackground from "./HeroBackground";
 
 export default function Hero() {
@@ -84,6 +85,18 @@ export default function Hero() {
 							/>
 						</div>
 					</div>
+					<motion.a
+						href="https://hopin.com/events/xviii-simonyi-konferencia"
+						target="_blank"
+						rel="noopener"
+						className={styles.button}
+						style={{ willChange: "top, opacity" }}
+						animate={{ opacity: 1, top: 0 }}
+						transition={{ delay: 5.33, duration: 1 }}
+						initial={{ opacity: 0, top: 30 }}
+					>
+						Regisztráció
+					</motion.a>
 				</div>
 			</div>
 		</section>

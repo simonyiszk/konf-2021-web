@@ -1,0 +1,14 @@
+.header {
+	@apply fixed;
+	@apply z-40;
+	@apply flex;
+	@apply flex-wrap;
+	@apply items-center;
+	@apply justify-between;
+	@apply w-full;
+	@apply text-white;
+
+	@screen sm {
+		@apply p-0;
+	}
+}

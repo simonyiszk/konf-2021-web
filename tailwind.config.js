@@ -1,5 +1,19 @@
 module.exports = {
-	purge: ["./src/**/*.{js,ts,tsx,mdx}"],
+	purge: {
+		content: ["./src/**/*.{js,jsx,ts,tsx,mdx,css,scss}"],
+		options: {
+			safelist: {
+				greedy: [
+					/red$/,
+					/yellow$/,
+					/teal$/,
+					/blue$/,
+					/green$/,
+					/.*(red|yellow|teal|blue|green)-dark$/,
+				],
+			},
+		},
+	},
 	theme: {
 		extend: {
 			colors: {

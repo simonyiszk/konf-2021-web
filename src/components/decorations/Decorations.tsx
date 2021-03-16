@@ -1,5 +1,10 @@
-import clsx from "clsx";
 import { motion, SVGMotionProps } from "framer-motion";
+
+type ColorKey = "green" | "yellow" | "teal" | "red";
+
+type DecorationsColorProps = {
+	color?: ColorKey;
+};
 
 const colors = {
 	red: { DEFAULT: "#C14048", dark: "#A5323D" },
@@ -8,32 +13,15 @@ const colors = {
 	green: { DEFAULT: "#4BAF87", dark: "#419370" },
 };
 
-function getColor(color: "green" | "yellow" | "teal" | "red", isDark: boolean) {
-	if (color === "green")
-		if (isDark) return colors.green.dark;
-		else return colors.green.DEFAULT;
-	if (color === "red")
-		if (isDark) return colors.red.dark;
-		else return colors.red.DEFAULT;
-	if (color === "yellow")
-		if (isDark) return colors.yellow.dark;
-		else return colors.yellow.DEFAULT;
-	if (color === "teal")
-		if (isDark) return colors.teal.dark;
-		else return colors.teal.DEFAULT;
-	// Error return
-	return "pink";
+function getColor(color: ColorKey, isDark: boolean) {
+	return colors[color][isDark ? "dark" : "DEFAULT"] ?? "pink";
 }
-
-type DecorationsColorProps = {
-	color?: "green" | "yellow" | "teal" | "red";
-};
 
 export function FatLine({
 	color,
 	...props
 }: SVGMotionProps<SVGSVGElement> & DecorationsColorProps) {
-	const { width, height } = props;
+	const { width } = props;
 	const strokeWidth = 45;
 	const rand = Math.random() * 4;
 	return (
@@ -102,7 +90,6 @@ export function SmallCircle({
 	color,
 	...props
 }: React.SVGProps<SVGSVGElement> & DecorationsColorProps) {
-	const { width } = props;
 	const rand = Math.random() * 4;
 	return (
 		<svg height="42" width="42" {...props}>

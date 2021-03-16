@@ -7,10 +7,7 @@ import {
 
 export default function Footer() {
 	return (
-		<footer
-			className="z-20 p-8 w-full text-white bg-yellow rounded-t-2xl"
-			id="footer"
-		>
+		<footer className="z-20 p-8 w-full text-white bg-yellow" id="footer">
 			<div className="container flex flex-col items-center justify-center mx-auto space-y-6">
 				<div className="flex items-center justify-evenly w-full lg:w-1/3">
 					<a href="mailto:konferencia@simonyi.bme.hu">
@@ -19,46 +16,41 @@ export default function Footer() {
 					<a
 						href="https://www.instagram.com/simonyikonf/"
 						target="_blank"
-						rel="noopener noreferrer"
+						rel="noopener"
 					>
 						<FaInstagram className="w-10 h-auto hover:text-blue text-blue-dark" />
 					</a>
-					<a
-						href="https://fb.me/e/1ayaVpuDp"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
+					<a href="https://fb.me/e/1ayaVpuDp" target="_blank" rel="noopener">
 						<FaFacebookSquare className="w-10 h-auto hover:text-blue text-blue-dark" />
 					</a>
 					<a
 						href="https://www.youtube.com/user/SimonyiSzakkoli/"
 						target="_blank"
-						rel="noopener noreferrer"
+						rel="noopener"
 					>
 						<FaYoutube className="w-10 h-auto hover:text-blue text-blue-dark" />
 					</a>
 				</div>
-				<div className="flex items-center justify-evenly w-full lg:w-1/3">
-					<a
-						href="https://simonyi.bme.hu"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
+				<div className="grid gap-4 grid-cols-1 items-center justify-items-center w-full lg:grid-cols-3 lg:w-auto">
+					<a href="https://simonyi.bme.hu" target="_blank" rel="noopener">
 						<img
 							src="/assets/images/simonyi_color.svg"
 							alt="Simonyi Károly Szakkollégium"
 							className="w-auto h-16"
 						/>
 					</a>
-					<a
-						href="https://vik.bme.hu"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
+					<a href="https://vik.bme.hu" target="_blank" rel="noopener">
 						<img
 							src="/assets/images/VIK.svg"
 							alt="Villamosmérnöki és Informatikai Kar"
 							className="w-auto h-16"
+						/>
+					</a>
+					<a href="https://schdesign.hu" target="_blank" rel="noopener">
+						<img
+							src="/assets/images/schdesign.svg"
+							alt="schdesign"
+							className="w-auto h-12"
 						/>
 					</a>
 				</div>
@@ -66,7 +58,7 @@ export default function Footer() {
 					className="flex items-center mx-auto"
 					href="https://vercel.com?utm_source=simonyi-konf&utm_campaign=oss"
 					target="_blank"
-					rel="noopener noreferrer"
+					rel="noopener"
 				>
 					<svg
 						width="168"

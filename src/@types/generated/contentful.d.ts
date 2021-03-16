@@ -41,6 +41,9 @@ export interface IOrganiser extends Entry<IOrganiserFields> {
 }
 
 export interface IPresentationFields {
+	/** order */
+	order: number;
+
 	/** Title */
 	title: string;
 
@@ -53,14 +56,17 @@ export interface IPresentationFields {
 	/** Image */
 	image: Asset;
 
-	/** Date */
-	date: string;
+	/** Start Date */
+	startDate?: string | undefined;
 
-	/** Link */
-	link: string;
+	/** End Date */
+	endDate?: string | undefined;
 
 	/** Description */
 	description: string;
+
+	/** Link */
+	link?: string | undefined;
 }
 
 /** Describes the preview and also the opened presentation component. */

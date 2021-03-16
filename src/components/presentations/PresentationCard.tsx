@@ -1,37 +1,54 @@
+import Image from "next/image";
+import tinydate from "tinydate";
+
+import type { IPresentationFields } from "@/@types/generated/contentful";
+
+import styles from "./PresentationCard.module.scss";
+
 type PresentationCardProps = {
-	title: string;
-	name: string;
-	date: string;
-	profession?: string;
 	imageURL: string;
-	description: string;
-};
+} & IPresentationFields &
+	React.HTMLProps<HTMLDivElement>;
 
 export default function PresentationCard({
 	title,
 	name,
-	date,
+	startDate,
+	endDate,
 	profession,
 	imageURL,
-	description,
+	children,
 }: PresentationCardProps) {
+	const startDateObj = new Date(startDate ?? "");
+	const endDateObj = new Date(endDate ?? "");
+	const stamp = tinydate("{HH}:{mm}");
+
 	return (
-		<figure className="max-w-screen-sm text-white font-Roboto bg-blue-dark rounded">
-			<div className="relative p-3">
-				<img className="mb-4 w-full" src={imageURL} alt={title} />
-				<figcaption>
-					<h3 className="mb-3 text-teal text-2xl font-bold">{title}</h3>
-					<h4 className="mb-6 uppercase">
-						{name} - {profession ?? "Error: No Profession Provided"}
+		<figure className={styles.card}>
+			<div className={styles.container}>
+				<div className={styles.imageContainer}>
+					<Image
+						className={styles.image}
+						src={imageURL}
+						alt={name}
+						width={208}
+						height={208}
+					/>
+				</div>
+
+				<figcaption className={styles.caption}>
+					<h3>{title}</h3>
+					<h4>
+						{name} - {profession ?? "ErrNo: Profession"}
 					</h4>
-					<h4 className="text-yellow font-bold">{date}</h4>
-					<button
-						className="absolute bottom-3 right-3 p-4 text-black leading-none bg-yellow rounded-full"
-						type="button"
-					>
-						+
-					</button>
+					{startDate && endDate && (
+						<h5>
+							{stamp(startDateObj)}-{stamp(endDateObj)}
+						</h5>
+					)}
 				</figcaption>
+
+				<div className={styles.content}>{children}</div>
 			</div>
 		</figure>
 	);

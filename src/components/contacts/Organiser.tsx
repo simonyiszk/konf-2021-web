@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import Image from "next/image";
 
 import type { IOrganiserFields } from "@/@types/generated/contentful";
 
@@ -15,11 +16,13 @@ export default function Organizer({
 	return (
 		<div className="flex flex-col items-center mb-10 px-10 space-y-3">
 			<div className={clsx(bgColor, "p-2 rounded-full")}>
-				<div className="block p-2 bg-blue rounded-full">
-					<img
-						src={image.fields.file.url}
+				<div className="block p-2 w-56 h-56 bg-blue rounded-full">
+					<Image
+						src={`https:${image.fields.file.url}`}
 						alt={name}
-						className="w-52 h-52 rounded-full"
+						className="rounded-full"
+						width={208}
+						height={208}
 					/>
 				</div>
 			</div>

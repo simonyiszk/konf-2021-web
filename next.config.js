@@ -1,12 +1,14 @@
 const withBundleAnalyzer = require("@next/bundle-analyzer");
 const withPlugins = require("next-compose-plugins");
 
-module.exports = withPlugins(
-	[withBundleAnalyzer({ enabled: process.env.ANALYZE === "true" })],
-	{
-		reactStrictMode: true,
-		reactRefresh: false,
-		fastRefresh: false,
+const nextConfig = {
+	reactStrictMode: true,
+	images: {
+		domains: ["images.ctfassets.net"],
 	},
-	{ reactStrictMode: true, reactRefresh: false, fastRefresh: false },
+};
+
+module.exports = withPlugins(
+	[[withBundleAnalyzer, { enabled: process.env.ANALYZE === "true" }]],
+	nextConfig,
 );

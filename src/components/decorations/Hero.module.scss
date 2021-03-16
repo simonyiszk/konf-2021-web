@@ -1,0 +1,24 @@
+.button {
+	@apply text-blue;
+	@apply text-3xl;
+	@apply bg-green;
+	@apply rounded-lg;
+	@apply px-8;
+	@apply py-2;
+	@apply font-bold;
+	@apply font-Roboto;
+	@apply text-center;
+	@apply col-span-2;
+	@apply justify-self-center;
+	@apply mt-20;
+	@apply relative;
+	@apply block;
+
+	box-shadow: 0px 0px 0px rgb(65, 147, 112);
+
+	transition: box-shadow 0.15s;
+
+	&:hover {
+		box-shadow: 6px 6px 0px rgb(65, 147, 112);
+	}
+}
