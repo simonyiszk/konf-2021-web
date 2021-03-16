@@ -6,6 +6,25 @@ const nextConfig = {
 	images: {
 		domains: ["images.ctfassets.net"],
 	},
+	async redirects() {
+		return [
+			{
+				source: "/2019",
+				destination: "https://regi.konferencia.simonyi.bme.hu/",
+				permanent: true,
+			},
+			{
+				source: "/2018",
+				destination: "https://regi.konferencia.simonyi.bme.hu/2018",
+				permanent: true,
+			},
+			{
+				source: "/2017",
+				destination: "https://regi.konferencia.simonyi.bme.hu/2017",
+				permanent: true,
+			},
+		];
+	},
 };
 
 module.exports = withPlugins(
