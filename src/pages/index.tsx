@@ -17,10 +17,8 @@ export const getStaticProps = async () => {
 		a: Entry<IPresentationFields>,
 		b: Entry<IPresentationFields>,
 	): number {
-		if (Date.parse(a.fields.startDate) > Date.parse(b.fields.startDate))
-			return -1;
-		if (Date.parse(a.fields.startDate) < Date.parse(b.fields.startDate))
-			return 1;
+		if (a.fields.order > b.fields.order) return -1;
+		if (a.fields.order < b.fields.order) return 1;
 		return 0;
 	}
 
