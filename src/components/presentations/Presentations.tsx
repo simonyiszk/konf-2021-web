@@ -23,9 +23,10 @@ type PresentationsProps = {
 export default function Presentations({ presentations }: PresentationsProps) {
 	return (
 		<section
-			className="container grid gap-8 grid-cols-1 justify-items-center mb-8 mx-auto p-3 lg:grid-cols-2"
+			className="container grid gap-8 grid-cols-1 justify-items-center mb-16 mt-16 mx-auto p-3 lg:grid-cols-2"
 			id="eloadok"
 		>
+			<h2 className="mb-4 text-4xl font-semibold lg:col-span-2">Előadások</h2>
 			{presentations.map((entry) => {
 				const presentationContent = hydrate(entry.mdxSource, {
 					components: { h5: H5, br: Br },
