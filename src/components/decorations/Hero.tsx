@@ -86,7 +86,7 @@ export default function Hero() {
 						</div>
 					</div>
 					<motion.a
-						href="https://schdesign.hu"
+						href="https://hopin.com/events/xviii-simonyi-konferencia"
 						target="_blank"
 						rel="noopener"
 						className={styles.button}
