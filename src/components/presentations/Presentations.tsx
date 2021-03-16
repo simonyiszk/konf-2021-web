@@ -5,7 +5,8 @@ import React from "react";
 
 import type { IPresentationFields } from "@/@types/generated/contentful";
 
-import H5 from "./H5";
+import Br from "../customDefaults/Br";
+import H5 from "../customDefaults/H5";
 import PresentationCard from "./PresentationCard";
 
 type PresentationsProps = {
@@ -27,13 +28,17 @@ export default function Presentations({ presentations }: PresentationsProps) {
 		>
 			{presentations.map((entry) => {
 				const presentationContent = hydrate(entry.mdxSource, {
-					components: { h5: H5 },
+					components: { h5: H5, br: Br },
 				});
+				let imageUrl = "/assets/images/blank.png";
+				if (entry.fields.image) {
+					imageUrl = `https:${entry.fields.image.fields.file.url}`;
+				}
 				return (
 					<PresentationCard
 						key={entry.sys.id}
 						{...entry.fields}
-						imageURL={entry.fields.image.fields.file.url}
+						imageURL={imageUrl}
 					>
 						{presentationContent}
 					</PresentationCard>

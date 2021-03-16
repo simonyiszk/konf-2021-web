@@ -152,15 +152,6 @@ export default function HeroBackground() {
 			>
 				<FaAngleDown className="text-red text-6xl" />
 			</motion.div>
-
-			{/* Remote Styles */}
-			<span className="hidden" aria-hidden="true">
-				<div className="hidden text-yellow bg-yellow" />
-				<div className="hidden text-red bg-red" />
-				<div className="hidden text-blue bg-blue" />
-				<div className="hidden text-green bg-green" />
-				<div className="hidden text-teal bg-teal" />
-			</span>
 		</div>
 	);
 }

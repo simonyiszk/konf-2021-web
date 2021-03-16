@@ -19,29 +19,33 @@ export default function PresentationCard({
 	imageURL,
 	children,
 }: PresentationCardProps) {
-	const startDateObj = new Date(startDate);
-	const endDateObj = new Date(endDate);
+	const startDateObj = new Date(startDate ?? "");
+	const endDateObj = new Date(endDate ?? "");
 	const stamp = tinydate("{HH}:{mm}");
 
 	return (
 		<figure className={styles.card}>
 			<div className={styles.container}>
-				<Image
-					className={styles.image}
-					src={`https:${imageURL}`}
-					alt={name}
-					width={208}
-					height={208}
-				/>
+				<div className={styles.imageContainer}>
+					<Image
+						className={styles.image}
+						src={imageURL}
+						alt={name}
+						width={208}
+						height={208}
+					/>
+				</div>
 
 				<figcaption className={styles.caption}>
 					<h3>{title}</h3>
 					<h4>
-						{name} - {profession ?? "Error: No Profession Provided"}
+						{name} - {profession ?? "ErrNo: Profession"}
 					</h4>
-					<h5>
-						{stamp(startDateObj)}-{stamp(endDateObj)}
-					</h5>
+					{startDate && endDate && (
+						<h5>
+							{stamp(startDateObj)}-{stamp(endDateObj)}
+						</h5>
+					)}
 				</figcaption>
 
 				<div className={styles.content}>{children}</div>

@@ -11,13 +11,22 @@
 	@apply p-3;
 	@apply grid;
 	@apply gap-4;
-	grid-template-columns: 4fr 6fr;
+	grid-template-columns: auto 1fr;
 	@apply items-center;
 }
 
 .image {
 	@apply w-full;
 	@apply rounded-full;
+	@apply w-52;
+	@apply h-52;
+}
+
+.imageContainer {
+	max-height: 208px;
+	max-width: 208px;
+	width: fit-content;
+	height: fit-content;
 }
 
 .caption {
