@@ -13,6 +13,12 @@
 	@apply gap-4;
 	grid-template-columns: auto 1fr;
 	@apply items-center;
+	@screen sm {
+		@apply p-8;
+	}
+	@screen lg {
+		@apply p-12;
+	}
 }
 
 .image {

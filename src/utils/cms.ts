@@ -4,6 +4,7 @@ import renderToString from "next-mdx-remote/render-to-string";
 import type {
 	IOrganiserFields,
 	IPresentationFields,
+	ISponsorLogoFields,
 } from "@/@types/generated/contentful";
 
 import { client } from "./contentful";
@@ -40,5 +41,15 @@ export async function getCmsData() {
 
 	organisers.items.sort((a, b) => a.fields.order - b.fields.order);
 
-	return { presentations: renderedPresentations, organisers: organisers.items };
+	const sponsors = await client.getEntries<ISponsorLogoFields>({
+		content_type: "sponsorLogo",
+	});
+
+	sponsors.items.sort((a, b) => (a.fields.name > b.fields.name ? 1 : -1));
+
+	return {
+		presentations: renderedPresentations,
+		organisers: organisers.items,
+		sponsors: sponsors.items,
+	};
 }

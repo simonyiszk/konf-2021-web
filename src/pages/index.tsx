@@ -4,15 +4,17 @@ import Contacts from "@/components/contacts/Contacts";
 import Hero from "@/components/decorations/Hero";
 import Layout from "@/components/Layout";
 import Presentations from "@/components/presentations/Presentations";
+import SponsorSection from "@/components/sponsors/SponsorSection";
 import { getCmsData } from "@/utils/cms";
 
 export const getStaticProps = async () => {
-	const { presentations, organisers } = await getCmsData();
+	const { presentations, organisers, sponsors } = await getCmsData();
 
 	return {
 		props: {
 			presentations,
 			organisers,
+			sponsors,
 		},
 	};
 };
@@ -20,12 +22,14 @@ export const getStaticProps = async () => {
 export default function HomePage({
 	presentations,
 	organisers,
+	sponsors,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
 	return (
 		<Layout>
 			<Hero />
 			<Presentations presentations={presentations} />
 			<Contacts organisers={organisers} />
+			<SponsorSection sponsors={sponsors} />
 		</Layout>
 	);
 }
