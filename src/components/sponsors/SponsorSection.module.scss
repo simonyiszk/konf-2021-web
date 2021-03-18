@@ -32,8 +32,10 @@
 		items-center
 		justify-evenly;
 
-	height: -moz-available;
-	height: -webkit-fill-available;
+	@screen sm {
+		height: -moz-available;
+		height: -webkit-fill-available;
+	}
 }
 
 .containerMany {
@@ -42,12 +44,12 @@
 		justify-items-center
 		w-full;
 
-	height: -moz-available;
-	height: -webkit-fill-available;
-
 	grid-template-columns: 1fr;
 	@screen sm {
 		grid-template-columns: 1fr 1fr;
+
+		height: -moz-available;
+		height: -webkit-fill-available;
 	}
 	@screen md {
 		grid-template-columns: 1fr 1fr 1fr;

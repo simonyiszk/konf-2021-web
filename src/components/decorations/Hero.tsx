@@ -33,7 +33,7 @@ export default function Hero() {
 						)}
 						style={{ willChange: "left, opacity" }}
 						animate={{ opacity: 1, left: 0 }}
-						transition={{ delay: 2.5, duration: 2 }}
+						transition={{ delay: 1, duration: 2 }}
 						initial={{ opacity: 0, left: 300 }}
 						id="hero-simonyi"
 					>
@@ -47,7 +47,7 @@ export default function Hero() {
 						)}
 						style={{ willChange: "left, opacity" }}
 						animate={{ opacity: 1, left: 0 }}
-						transition={{ delay: 3, duration: 1.5 }}
+						transition={{ delay: 1.25, duration: 2 }}
 						initial={{ opacity: 0, left: 300 }}
 						id="hero-konf"
 					>
@@ -59,7 +59,7 @@ export default function Hero() {
 								style={{ willChange: "width" }}
 								className="border-t-3 rounded-full"
 								animate={{ width: "100%" }}
-								transition={{ delay: 4, duration: 2 }}
+								transition={{ delay: 2.5, duration: 1.5 }}
 								initial={{ width: "0%" }}
 							/>
 						</div>
@@ -70,7 +70,7 @@ export default function Hero() {
 							)}
 							style={{ willChange: "top, opacity" }}
 							animate={{ opacity: 1, top: 0 }}
-							transition={{ delay: 5, duration: 1 }}
+							transition={{ delay: 3, duration: 0.75 }}
 							initial={{ opacity: 0, top: 30 }}
 						>
 							2021.04.14.
@@ -80,7 +80,7 @@ export default function Hero() {
 								style={{ willChange: "width" }}
 								className="border-t-3 absolute right-0 rounded-full transform rotate-180"
 								animate={{ width: "100%" }}
-								transition={{ delay: 4, duration: 2 }}
+								transition={{ delay: 2.5, duration: 1.5 }}
 								initial={{ width: "0%" }}
 							/>
 						</div>
@@ -92,7 +92,7 @@ export default function Hero() {
 						className={styles.button}
 						style={{ willChange: "top, opacity" }}
 						animate={{ opacity: 1, top: 0 }}
-						transition={{ delay: 5.33, duration: 1 }}
+						transition={{ delay: 3.5, duration: 0.75 }}
 						initial={{ opacity: 0, top: 30 }}
 					>
 						Regisztráció
