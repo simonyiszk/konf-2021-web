@@ -15,7 +15,7 @@
 	}
 
 	@screen 2xl {
-		grid-template-columns: auto auto auto;
+		grid-template-columns: 1fr 1fr 1fr;
 		h3 {
 			@apply col-span-3;
 		}
@@ -23,7 +23,7 @@
 }
 
 .wrap {
-	@apply flex flex-col items-center justify-center;
+	// @apply flex flex-col items-center justify-center;
 }
 
 .containerOne {
@@ -33,8 +33,9 @@
 		justify-evenly;
 
 	@screen sm {
-		height: -moz-available;
-		height: -webkit-fill-available;
+		// height: -moz-available;
+		// height: -webkit-fill-available;
+		// height: fill-available;
 	}
 }
 
@@ -48,8 +49,9 @@
 	@screen sm {
 		grid-template-columns: 1fr 1fr;
 
-		height: -moz-available;
-		height: -webkit-fill-available;
+		// height: -moz-available;
+		// height: -webkit-fill-available;
+		// height: fill-available;
 	}
 	@screen md {
 		grid-template-columns: 1fr 1fr 1fr;
