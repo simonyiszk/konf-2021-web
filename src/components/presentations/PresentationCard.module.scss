@@ -19,6 +19,7 @@
 	@screen lg {
 		@apply p-12;
 	}
+	@apply justify-items-center;
 }
 
 .image {
@@ -33,9 +34,19 @@
 	max-width: 208px;
 	width: fit-content;
 	height: fit-content;
+	@apply col-span-2;
+
+	@screen sm {
+		@apply col-span-1;
+	}
 }
 
 .caption {
+	@apply col-span-2;
+
+	@screen sm {
+		@apply col-span-1;
+	}
 	h3 {
 		@apply mb-3;
 		@apply text-teal;
