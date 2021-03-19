@@ -23,7 +23,7 @@ export default function SponsorSection({ sponsors }: SponsorProps) {
 		<section className={styles.section}>
 			<h3>Szponzoraink</h3>
 			<div className={styles.wrap}>
-				<h4>Főtámogató</h4>
+				<h4>Főtámogatónk</h4>
 				<div className={styles.containerOne}>
 					{gold.map((sponsor) => {
 						return (
@@ -37,7 +37,7 @@ export default function SponsorSection({ sponsors }: SponsorProps) {
 				</div>
 			</div>
 			<div className={styles.wrap}>
-				<h4>Kiemelt támogatók</h4>
+				<h4>Kiemelt támogatóink</h4>
 				<div className={styles.containerMany}>
 					{silver.map((sponsor) => {
 						return (
@@ -51,7 +51,7 @@ export default function SponsorSection({ sponsors }: SponsorProps) {
 				</div>
 			</div>
 			<div className={styles.wrap}>
-				<h4>További támogatók</h4>
+				<h4>További támogatóink</h4>
 				<div className={styles.containerMany}>
 					{bronze.map((sponsor) => {
 						return (

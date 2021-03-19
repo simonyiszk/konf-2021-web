@@ -5,7 +5,7 @@ import Hero from "@/components/decorations/Hero";
 import Layout from "@/components/Layout";
 import Presentations from "@/components/presentations/Presentations";
 import SponsorSection from "@/components/sponsors/SponsorSection";
-import { getCmsData } from "@/utils/cms";
+import { getCmsData } from "@/utils/contentful";
 
 export const getStaticProps = async () => {
 	const { presentations, organisers, sponsors } = await getCmsData();
