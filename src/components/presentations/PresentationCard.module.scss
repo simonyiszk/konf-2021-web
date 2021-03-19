@@ -13,6 +13,13 @@
 	@apply gap-4;
 	grid-template-columns: auto 1fr;
 	@apply items-center;
+	@screen sm {
+		@apply p-8;
+	}
+	@screen lg {
+		@apply p-12;
+	}
+	@apply justify-items-center;
 }
 
 .image {
@@ -27,9 +34,19 @@
 	max-width: 208px;
 	width: fit-content;
 	height: fit-content;
+	@apply col-span-2;
+
+	@screen sm {
+		@apply col-span-1;
+	}
 }
 
 .caption {
+	@apply col-span-2;
+
+	@screen sm {
+		@apply col-span-1;
+	}
 	h3 {
 		@apply mb-3;
 		@apply text-teal;

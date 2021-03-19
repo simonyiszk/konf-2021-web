@@ -135,7 +135,7 @@ export function Svg18({ ...props }: React.SVGProps<SVGSVGElement>) {
 						"rgba(255, 255, 255, 1)",
 					],
 				}}
-				transition={{ duration: 4, delay: 0 }}
+				transition={{ duration: 3, delay: 0 }}
 				style={{ willChange: "path-length, fill" }}
 				d="M0,29.1v147.3v147.3C0,405,65.9,470.9,147.3,470.9V323.6V176.4C147.3,95,81.3,29.1,0,29.1z"
 			/>
@@ -152,7 +152,7 @@ export function Svg18({ ...props }: React.SVGProps<SVGSVGElement>) {
 						"rgba(255, 255, 255, 1)",
 					],
 				}}
-				transition={{ duration: 4, delay: 1 }}
+				transition={{ duration: 3, delay: 0.5 }}
 				style={{ willChange: "path-length, fill" }}
 				d="M500,176.4C500,95,434.1,29.1,352.7,29.1c-81.3,0-147.3,65.9-147.3,147.3c0,26.8,7.2,52,19.7,73.6
 				c-12.5,21.7-19.7,46.8-19.7,73.6c0,81.3,65.9,147.3,147.3,147.3c81.3,0,147.3-65.9,147.3-147.3c0-26.8-7.2-52-19.7-73.6

@@ -88,7 +88,38 @@ export interface IPresentation extends Entry<IPresentationFields> {
 	};
 }
 
-export type ContentType = "organiser" | "presentation";
+export interface ISponsorLogoFields {
+	/** Name */
+	name: string;
+
+	/** Link */
+	link?: string | undefined;
+
+	/** Image */
+	image: Asset;
+
+	/** Sponsorship Grade */
+	sponsorshipGrade: "főtámogató" | "kiemelt támogató" | "támogató";
+}
+
+export interface ISponsorLogo extends Entry<ISponsorLogoFields> {
+	sys: {
+		id: string;
+		type: string;
+		createdAt: string;
+		updatedAt: string;
+		locale: string;
+		contentType: {
+			sys: {
+				id: "sponsorLogo";
+				linkType: "ContentType";
+				type: "Link";
+			};
+		};
+	};
+}
+
+export type ContentType = "organiser" | "presentation" | "sponsorLogo";
 
 export type LocaleCode = "en-US";
 
