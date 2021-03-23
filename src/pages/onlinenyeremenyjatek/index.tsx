@@ -19,11 +19,11 @@ export default function GiveawayPage() {
 				<meta property="fb:app_id" content="152351391599356" />
 				<meta
 					property="og:description"
-					content="A játékban való részvételhez: Lájkold ezt a Facebook posztot. \n
-					Kövesd be a @simonyikonf oldalát Instagramon. \n
-					Oszd meg ezt a bejegyzést az Instagram storydban megjelölve a @simonyikonf oldalát. \n
-					Játék vége: 2021. 04. 13. 12:00. \n
-					A nyertest a XVIII. Simonyi Konferencián, 2021. 04. 14-én 17:30 és 18:00 között fogjuk kihírdetni. \n
+					content="A játékban való részvételhez: Lájkold ezt a Facebook posztot.
+					Kövesd be a @simonyikonf oldalát Instagramon.
+					Oszd meg ezt a bejegyzést az Instagram storydban megjelölve a @simonyikonf oldalát.
+					Játék vége: 2021. 04. 13. 12:00.
+					A nyertest a XVIII. Simonyi Konferencián, 2021. 04. 14-én 17:30 és 18:00 között fogjuk kihírdetni.
 					Az eseményre regisztrálni a konferencia.simonyi.bme.hu oldalon tudtok."
 				/>
 
