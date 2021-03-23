@@ -1,10 +1,8 @@
 import Head from "next/head";
 
-import Layout from "@/components/Layout";
-
 export default function GiveawayPage() {
 	return (
-		<Layout>
+		<>
 			<Head>
 				<title>Simonyi Konferencia Online Nyeremény</title>
 				<meta httpEquiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
@@ -15,7 +13,7 @@ export default function GiveawayPage() {
 				/>
 				<meta
 					property="og:title"
-					content="Nyerj egy JBL FLIPESSENTIAL hordozható hangszórót a XVIII. Simonyi Konferencia online nyereményjátékán!"
+					content="Nyerj egy JBL FLIP ESSENTIAL hordozható hangszórót a XVIII. Simonyi Konferencia online nyereményjátékán!"
 				/>
 				<meta property="twitter:card" content="summary" />
 				<meta property="fb:app_id" content="152351391599356" />
@@ -43,6 +41,6 @@ export default function GiveawayPage() {
 				allowFullScreen
 				title="Giveaway"
 			/>
-		</Layout>
+		</>
 	);
 }
