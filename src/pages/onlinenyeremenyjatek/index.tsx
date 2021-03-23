@@ -4,7 +4,7 @@ export default function GiveawayPage() {
 	return (
 		<>
 			<Head>
-				<title>Simonyi Konferencia Online Nyeremény</title>
+				<title>Online nyereményjáték a XVIII. Simonyi Konferencián</title>
 				<meta httpEquiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
 				<meta name="viewport" content="width=device-width, user-scalable=0" />
 				<meta
@@ -19,12 +19,8 @@ export default function GiveawayPage() {
 				<meta property="fb:app_id" content="152351391599356" />
 				<meta
 					property="og:description"
-					content="A játékban való részvételhez: Lájkold ezt a Facebook posztot.
-					Kövesd be a @simonyikonf oldalát Instagramon.
-					Oszd meg ezt a bejegyzést az Instagram storydban megjelölve a @simonyikonf oldalát.
-					Játék vége: 2021. 04. 13. 12:00.
-					A nyertest a XVIII. Simonyi Konferencián, 2021. 04. 14-én 17:30 és 18:00 között fogjuk kihírdetni.
-					Az eseményre regisztrálni a konferencia.simonyi.bme.hu oldalon tudtok."
+					content="Nyerj egy JBL FLIPESSENTIAL hordozható hangszórót a XVIII. Simonyi Konferencia online nyereményjátékán!
+					A játékban való részvételhez teljesítsd az oldalon található lépéseket 2021. 04. 13. 12:00-ig."
 				/>
 
 				<style
