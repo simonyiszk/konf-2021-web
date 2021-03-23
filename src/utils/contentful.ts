@@ -30,6 +30,8 @@ function orderEntriesByDate(
 }
 
 export async function getCmsData() {
+	console.log(process.env);
+
 	const presentations = await client.getEntries<IPresentationFields>({
 		content_type: "presentation",
 	});
