@@ -12,7 +12,8 @@
 }
 
 .section {
-	overflow-x: scroll;
+	overflow-x: auto;
+	@apply p-3 mt-8;
 	&::after {
 		@apply absolute;
 		background-color: rgba(0, 0, 0, 0.5);

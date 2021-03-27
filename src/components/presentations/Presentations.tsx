@@ -25,62 +25,53 @@ export default function Presentations({
 	rightPresentations,
 }: PresentationsProps) {
 	return (
-		<>
-			<h2 className="mb-4 mt-16 text-center text-4xl font-semibold">
-				Előadások
-			</h2>
-			<section className={styles.section}>
-				<div
-					className={clsx(
-						styles.container,
-						"relative grid gap-8 grid-cols-2 justify-items-center mb-16 mt-4 mx-auto p-3 md:gap-16 lg:grid-cols-2",
-					)}
-					id="eloadok"
-				>
-					<div className={styles.timeline} />
-					<div>
-						{leftPresentations.map((entry, i) => {
-							const presentationContent = hydrate(entry.mdxSource, {
-								components: { h5: H5, br: Br },
-							});
-							const imageUrl = entry.image
-								? `https:${entry.image.fields.file.url}`
-								: "/assets/images/blank.png";
+		<section className={clsx(styles.section, "scroll-margin")} id="eloadasok">
+			<h2 className="mb-4 text-center text-4xl font-semibold">Előadások</h2>
+			<div
+				className={clsx(
+					styles.container,
+					"relative grid gap-8 grid-cols-2 justify-items-center mb-16 mt-4 mx-auto md:gap-16 lg:grid-cols-2",
+				)}
+			>
+				<div className={styles.timeline} />
+				<div>
+					{leftPresentations.map((entry, i) => {
+						const presentationContent = hydrate(entry.mdxSource, {
+							components: { h5: H5, br: Br },
+						});
+						const imageUrl = entry.image
+							? `https:${entry.image.fields.file.url}`
+							: "/assets/images/blank.png";
 
-							return (
-								<PresentationCard
-									key={entry.name}
-									{...entry}
-									isLeft
-									imageURL={imageUrl}
-								>
-									{presentationContent}
-								</PresentationCard>
-							);
-						})}
-					</div>
-					<div>
-						{rightPresentations.map((entry, i) => {
-							const presentationContent = hydrate(entry.mdxSource, {
-								components: { h5: H5, br: Br },
-							});
-							const imageUrl = entry.image
-								? `https:${entry.image.fields.file.url}`
-								: "/assets/images/blank.png";
-
-							return (
-								<PresentationCard
-									key={entry.name}
-									{...entry}
-									imageURL={imageUrl}
-								>
-									{presentationContent}
-								</PresentationCard>
-							);
-						})}
-					</div>
+						return (
+							<PresentationCard
+								key={entry.name}
+								{...entry}
+								isLeft
+								imageURL={imageUrl}
+							>
+								{presentationContent}
+							</PresentationCard>
+						);
+					})}
 				</div>
-			</section>
-		</>
+				<div>
+					{rightPresentations.map((entry, i) => {
+						const presentationContent = hydrate(entry.mdxSource, {
+							components: { h5: H5, br: Br },
+						});
+						const imageUrl = entry.image
+							? `https:${entry.image.fields.file.url}`
+							: "/assets/images/blank.png";
+
+						return (
+							<PresentationCard key={entry.name} {...entry} imageURL={imageUrl}>
+								{presentationContent}
+							</PresentationCard>
+						);
+					})}
+				</div>
+			</div>
+		</section>
 	);
 }
