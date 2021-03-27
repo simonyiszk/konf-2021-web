@@ -31,18 +31,32 @@ export default function Navbar() {
 		window.scrollTo(0, 0);
 	}
 
+	const variants = {
+		initial: {
+			"--after-w": "0%",
+			rotation: 0.001,
+		},
+		hover: {
+			"--after-w": "100%",
+			rotation: 0.001,
+		},
+	};
+
 	return (
 		<motion.header
-			className={clsx(styles.header, "bg-blur-10")}
-			style={{ willChange: "top" }}
-			animate={{ top: isNavbarVisible ? 0 : -100 }}
-			initial={{ top: -100 }}
+			className={clsx(styles.header)}
+			style={{ willChange: "background-color" }}
+			animate={{
+				backgroundColor: isNavbarVisible
+					? "rgba(39, 51, 67, 1)"
+					: "rgba(39, 51, 67, 0)",
+			}}
 			id="header"
 		>
-			<div className="relative flex flex-wrap items-center justify-between mx-auto px-2 w-full sm:px-8">
+			<div className="relative flex flex-wrap items-center justify-start mx-auto px-2 w-full sm:px-8">
 				<div className="relative flex justify-between w-full sm:static sm:block sm:justify-start sm:w-auto">
 					<span
-						className="flex items-center mr-2 no-underline text-2xl cursor-pointer lg:text-4xl lg:leading-10"
+						className="flex items-center mr-4 no-underline text-2xl cursor-pointer lg:text-4xl lg:leading-10"
 						onClick={scrollToTop}
 						onKeyPress={scrollToTop}
 						role="button"
@@ -72,19 +86,26 @@ export default function Navbar() {
 						{navbarContent.links.map(({ href, label }, i) => (
 							<li key={`${href}`} className="pl-2 py-1 w-full sm:pl-0">
 								<Link href={href}>
-									<a
+									<motion.a
+										role="link"
+										tabIndex={i}
 										className={clsx(
-											"hover:text-pink inline-block px-2 py-2 w-full text-xl font-medium sm:px-5 sm:text-2xl",
+											styles.navlink,
+											"hover:text-pink inline-block px-2 py-2 w-full text-xl font-normal cursor-pointer lowercase sm:px-5 sm:text-2xl",
 											i === 0 && "sm:pl-2",
 											i === navbarContent.links.length - 1 && "sm:pr-2",
 										)}
 										onClick={() => setNavbarOpen(false)}
 										onKeyPress={() => setNavbarOpen(false)}
-										role="link"
-										tabIndex={i}
+										// @ts-expect-error: Variants work, I don't know why it is an error
+										variants={variants}
+										initial="initial"
+										whileHover="hover"
+										whileFocus="hover"
+										transition={{ duration: 0.3 }}
 									>
 										{label}
-									</a>
+									</motion.a>
 								</Link>
 							</li>
 						))}

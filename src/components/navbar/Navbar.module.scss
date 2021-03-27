@@ -1,14 +1,17 @@
 .header {
-	@apply fixed;
-	@apply z-40;
-	@apply flex;
-	@apply flex-wrap;
-	@apply items-center;
-	@apply justify-between;
-	@apply w-full;
-	@apply text-white;
+	@apply fixed z-40 flex flex-wrap items-center justify-between w-full text-white top-0;
 
 	@screen sm {
 		@apply p-0;
+	}
+}
+
+.navlink {
+	&::after {
+		@apply border-t-2 border-yellow rounded-full block;
+		content: "";
+		width: var(--after-w);
+		margin-top: 0;
+		will-change: width;
 	}
 }

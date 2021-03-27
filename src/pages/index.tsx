@@ -24,10 +24,19 @@ export default function HomePage({
 	organisers,
 	sponsors,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+	const leftPresentations = presentations.filter(
+		(entry) => entry.side === "left",
+	);
+	const rightPresentations = presentations.filter(
+		(entry) => entry.side === "right",
+	);
 	return (
 		<Layout>
 			<Hero />
-			<Presentations presentations={presentations} />
+			<Presentations
+				leftPresentations={leftPresentations}
+				rightPresentations={rightPresentations}
+			/>
 			<Contacts organisers={organisers} />
 			<SponsorSection sponsors={sponsors} />
 		</Layout>

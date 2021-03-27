@@ -1,18 +1,15 @@
 .card {
-	@apply max-w-screen-sm;
-	@apply text-white;
-	@apply font-Roboto;
-	@apply bg-blue-dark;
-	@apply rounded-md;
+	@apply text-white font-Roboto bg-blue-dark rounded-md;
+
+	@screen sm {
+		@apply max-w-screen-sm;
+	}
+
+	max-width: 90vw;
 }
 
 .container {
-	@apply relative;
-	@apply p-3;
-	@apply grid;
-	@apply gap-4;
-	grid-template-columns: auto 1fr;
-	@apply items-center;
+	@apply relative p-3 grid gap-4 items-center;
 	@screen sm {
 		@apply p-8;
 	}
@@ -20,6 +17,7 @@
 		@apply p-12;
 	}
 	@apply justify-items-center;
+	grid-template-columns: auto 1fr;
 }
 
 .image {
@@ -30,38 +28,15 @@
 }
 
 .imageContainer {
-	max-height: 208px;
-	max-width: 208px;
+	@apply col-span-2;
+	@screen sm {
+		@apply col-span-1;
+	}
+
 	width: fit-content;
+	max-width: 208px;
 	height: fit-content;
-	@apply col-span-2;
-
-	@screen sm {
-		@apply col-span-1;
-	}
-}
-
-.caption {
-	@apply col-span-2;
-
-	@screen sm {
-		@apply col-span-1;
-	}
-	h3 {
-		@apply mb-3;
-		@apply text-teal;
-		@apply text-xl;
-		@apply font-bold;
-	}
-	h4 {
-		@apply mb-1;
-		@apply uppercase;
-		@apply text-sm;
-	}
-	h5 {
-		@apply text-yellow;
-		@apply font-bold;
-	}
+	max-height: 208px;
 }
 
 .content {

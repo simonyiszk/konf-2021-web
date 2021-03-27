@@ -1,0 +1,24 @@
+.container {
+	@screen sm {
+		min-width: 150vw;
+	}
+	@screen md {
+		min-width: 130vw;
+	}
+	@screen lg {
+		min-width: revert;
+	}
+	min-width: 180vw;
+}
+
+.section {
+	overflow-x: scroll;
+	&::after {
+		@apply absolute;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+}
+
+.timeline {
+	@apply absolute h-full border-r-2 border-dashed border-blue-dark left-1/2 right-1/2;
+}
