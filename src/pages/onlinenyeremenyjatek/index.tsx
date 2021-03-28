@@ -1,8 +1,10 @@
 import Head from "next/head";
 
+import Layout from "@/components/Layout";
+
 export default function GiveawayPage() {
 	return (
-		<>
+		<Layout>
 			<Head>
 				<title>Online nyereményjáték a XVIII. Simonyi Konferencián</title>
 				<meta httpEquiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
@@ -26,7 +28,7 @@ export default function GiveawayPage() {
 				<style
 					// eslint-disable-next-line react/no-danger
 					dangerouslySetInnerHTML={{
-						__html: `*{margin:0;padding:0;border:none;} html,iframe,body{width:100%;height:100%;} html{overflow:hidden} @media screen and (-webkit-min-device-pixel-ratio:0) {html,iframe,body,#__next{min-height:100%;}}iframe{height:100vh}`,
+						__html: `*{margin:0;padding:0;border:none;} html,iframe,body{width:100%;height:100%;} html{overflow:hidden} @media screen and (-webkit-min-device-pixel-ratio:0) {html,iframe,body,#__next{min-height:100%;}}iframe{height:100vh;padding-top:80px}`,
 					}}
 				/>
 			</Head>
@@ -37,6 +39,6 @@ export default function GiveawayPage() {
 				allowFullScreen
 				title="Giveaway"
 			/>
-		</>
+		</Layout>
 	);
 }
