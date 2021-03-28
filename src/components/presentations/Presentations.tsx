@@ -23,8 +23,8 @@ type PresentationsProps = {
 export default function Presentations({ presentations }: PresentationsProps) {
 	return (
 		<section
-			className="container grid gap-8 grid-cols-1 justify-items-center mb-16 mt-16 mx-auto p-3 lg:grid-cols-2"
-			id="eloadok"
+			className="scroll-margin container grid gap-8 grid-cols-1 justify-items-center mb-16 mt-16 mx-auto p-3 lg:grid-cols-2"
+			id="eloadasok"
 		>
 			<h2 className="mb-4 text-4xl font-semibold lg:col-span-2">Előadások</h2>
 			{presentations.map((entry) => {

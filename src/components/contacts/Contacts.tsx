@@ -9,7 +9,10 @@ type ContactsProps = {
 
 export default function Contacts({ organisers }: ContactsProps) {
 	return (
-		<section className="flex flex-col items-center" id="kapcsolat">
+		<section
+			className="scroll-margin flex flex-col items-center"
+			id="kapcsolat"
+		>
 			<h2 className="mb-10 text-4xl font-semibold">Kapcsolat</h2>
 			<div className="flex flex-wrap items-center justify-evenly w-full">
 				{organisers.map((organiser) => (

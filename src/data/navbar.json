@@ -1,6 +1,7 @@
 {
 	"links": [
-		{ "href": "/#eloadok", "label": "Előadók" },
-		{ "href": "/#kapcsolat", "label": "Kapcsolat" }
+		{ "href": "/#eloadasok", "label": "Előadások" },
+		{ "href": "/#kapcsolat", "label": "Kapcsolat" },
+		{ "href": "/onlinenyeremenyjatek", "label": "Nyereményjáték" }
 	]
 }
