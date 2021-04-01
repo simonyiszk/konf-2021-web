@@ -6,8 +6,10 @@ import Navbar from "./navbar/Navbar";
 
 export default function Layout({
 	children,
+	className,
 }: {
 	children: React.ReactNode;
+	className?: string;
 }): JSX.Element {
 	return (
 		<>
@@ -87,7 +89,7 @@ export default function Layout({
 				<meta name="theme-color" content="#E6A537" />
 			</Head>
 			<Navbar />
-			<main>{children}</main>
+			<main className={className}>{children}</main>
 			<Footer />
 		</>
 	);
