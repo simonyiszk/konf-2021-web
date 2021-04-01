@@ -10,7 +10,7 @@ import HeroBackground from "./HeroBackground";
 export default function Hero() {
 	return (
 		<section
-			className="relative w-full h-screen overflow-hidden"
+			className="relative w-full h-screen bg-blue overflow-hidden"
 			id="hero-container"
 		>
 			<HeroBackground />
