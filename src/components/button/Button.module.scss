@@ -1,0 +1,12 @@
+.button {
+	box-shadow: 0px 0px 0px rgb(65, 147, 112);
+
+	transition: box-shadow 0.15s;
+
+	&:hover,
+	&:active,
+	&:focus,
+	&:focus-visible {
+		box-shadow: 6px 6px 0px rgb(65, 147, 112);
+	}
+}

@@ -1,0 +1,9 @@
+.extra {
+	width: fit-content;
+	@apply mx-auto;
+	&::before {
+		content: "";
+		display: block;
+		@apply border-t-2 border-green border-dashed mb-2;
+	}
+}

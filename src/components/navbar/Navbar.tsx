@@ -90,7 +90,7 @@ export default function Navbar() {
 					<ul className="flex flex-col w-full rounded-lg list-none sm:flex-row sm:ml-auto sm:w-auto">
 						{navbarContent.links.map(({ href, label }, i) => (
 							<li key={`${href}`} className="pl-2 py-1 w-full sm:pl-0">
-								<Link href={href}>
+								<Link href={href} passHref>
 									<motion.a
 										role="link"
 										tabIndex={i}
