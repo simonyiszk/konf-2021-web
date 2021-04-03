@@ -23,6 +23,8 @@ export default function PresentationCard({
 	const endDateObj = new Date(endDate ?? "");
 	const stamp = tinydate("{HH}:{mm}");
 
+	const showDate = false;
+
 	return (
 		<figure className={styles.card}>
 			<div className={styles.container}>
@@ -41,7 +43,7 @@ export default function PresentationCard({
 					<h4>
 						{name} - {profession ?? "ErrNo: Profession"}
 					</h4>
-					{startDate && endDate && (
+					{showDate && startDate && endDate && (
 						<h5>
 							{stamp(startDateObj)}-{stamp(endDateObj)}
 						</h5>
