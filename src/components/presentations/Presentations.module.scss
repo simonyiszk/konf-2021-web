@@ -5,21 +5,34 @@
 	@screen md {
 		min-width: 130vw;
 	}
-	@screen lg {
+	@screen xl {
 		min-width: revert;
 	}
 	min-width: 180vw;
 }
 
 .section {
-	overflow-x: auto;
 	@apply p-3 mt-8;
-	&::after {
-		@apply absolute;
-		background-color: rgba(0, 0, 0, 0.5);
-	}
+}
+
+.overflow {
+	overflow-x: auto;
 }
 
 .timeline {
-	@apply absolute h-full border-r-2 border-dashed border-blue-dark left-1/2 right-1/2;
+	@apply absolute h-full border-r-2 border-dashed border-blue-dark;
+
+	left: calc(50% - 1px);
+}
+
+.time {
+	@apply absolute;
+	left: calc(50% - 8px);
+	&::before {
+		@apply rounded-full bg-yellow;
+		content: "";
+		display: block;
+		width: 16px;
+		height: 16px;
+	}
 }

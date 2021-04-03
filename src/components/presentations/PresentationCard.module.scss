@@ -1,5 +1,5 @@
 .card {
-	@apply text-white font-Roboto bg-blue-dark rounded-md mb-8;
+	@apply text-white font-Roboto bg-blue-dark rounded-md;
 
 	@screen sm {
 		@apply max-w-screen-sm;
@@ -21,10 +21,7 @@
 }
 
 .image {
-	@apply w-full;
-	@apply rounded-full;
-	@apply w-52;
-	@apply h-52;
+	@apply rounded-full w-52 h-52;
 }
 
 .imageContainer {
@@ -40,6 +37,5 @@
 }
 
 .content {
-	@apply col-span-2;
-	@apply mt-4;
+	@apply col-span-2 mt-4;
 }

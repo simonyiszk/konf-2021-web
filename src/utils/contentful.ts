@@ -21,7 +21,7 @@ const client = createClient({
 			: "preview.contentful.com",
 });
 
-function orderEntriesByDate(
+function orderEntriesByOrder(
 	a: Entry<IPresentationFields>,
 	b: Entry<IPresentationFields>,
 ): number {
@@ -30,10 +30,23 @@ function orderEntriesByDate(
 	return 0;
 }
 
+function orderEntriesByDate(
+	a: Entry<IPresentationFields>,
+	b: Entry<IPresentationFields>,
+): number {
+	if (!a.fields.startDate || !b.fields.startDate) return 0;
+
+	return (
+		Date.parse(a.fields.startDate) - Date.parse(b.fields.startDate) ||
+		a.fields.side.localeCompare(b.fields.side)
+	);
+}
 export async function getCmsData() {
 	const presentations = await client.getEntries<IPresentationFields>({
 		content_type: "presentation",
 	});
+
+	presentations.items.sort(orderEntriesByOrder);
 
 	presentations.items.sort(orderEntriesByDate);
 
