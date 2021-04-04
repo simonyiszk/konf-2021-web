@@ -1,6 +1,6 @@
 .extra {
 	width: fit-content;
-	@apply mx-auto;
+	@apply mx-auto mb-2;
 	&::before {
 		content: "";
 		display: block;

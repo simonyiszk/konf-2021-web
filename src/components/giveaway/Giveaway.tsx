@@ -24,34 +24,34 @@ export default function Giveaway() {
 				Az előadásokon való kérdezésért további értékes nyereményekkel
 				gazdagodhatsz!
 			</h4>
-			<div className="flex flex-wrap items-center justify-evenly pb-4 px-1 w-full">
+			<div className="flex flex-wrap items-center justify-evenly p-4 px-1 w-full">
 				<div>
 					<Image
-						src="/assets/images/monitor3.svg"
+						src="/assets/images/monitor_2000.gif"
 						className="pointer-events-none"
 						layout="intrinsic"
-						width={400}
-						height={400}
+						width={500}
+						height={275}
 					/>
 					<Link
 						href="https://hopin.com/events/xviii-simonyi-konferencia"
 						passHref
 					>
-						<Button target="_blank" className="-mt-10">
+						<Button target="_blank" className="mt-4">
 							Regisztrálok
 						</Button>
 					</Link>
 				</div>
 				<div>
 					<Image
-						src="/assets/images/jbl-blue.svg"
+						src="/assets/images/jbl-blue.png"
 						className="pointer-events-none"
 						layout="intrinsic"
-						width={400}
-						height={400}
+						width={500}
+						height={275}
 					/>
 					<Link href="/onlinenyeremenyjatek" passHref>
-						<Button href="" className="-mt-10">
+						<Button href="" className="mt-4">
 							Megnézem
 						</Button>
 					</Link>

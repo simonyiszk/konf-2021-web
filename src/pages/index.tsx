@@ -5,6 +5,7 @@ import Hero from "@/components/decorations/Hero";
 import Giveaway from "@/components/giveaway/Giveaway";
 import Layout from "@/components/Layout";
 import Presentations from "@/components/presentations/Presentations";
+import Standup from "@/components/presentations/Standup";
 import SponsorSection from "@/components/sponsors/SponsorSection";
 import { getCmsData } from "@/utils/contentful";
 
@@ -29,6 +30,7 @@ export default function HomePage({
 		<Layout>
 			<Hero />
 			<Presentations presentations={presentations} />
+			<Standup />
 			<Giveaway />
 			<Contacts organisers={organisers} />
 			<SponsorSection sponsors={sponsors} />

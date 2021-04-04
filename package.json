@@ -26,6 +26,11 @@
 		"*": "prettier --write --ignore-unknown",
 		"*.{js,ts,tsx}": "eslint --fix"
 	},
+	"browserslist": [
+		"defaults",
+		"not IE 11",
+		"maintained node versions"
+	],
 	"dependencies": {
 		"@contentful/rich-text-types": "^14.1.2",
 		"@next/bundle-analyzer": "^10.1.2",
