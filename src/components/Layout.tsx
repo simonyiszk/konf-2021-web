@@ -14,14 +14,14 @@ export default function Layout({
 	return (
 		<>
 			<Head>
-				<title>18. Simonyi Konferencia</title>
+				<title>XVIII. Simonyi Konferencia</title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<meta
 					name="description"
 					content="Magyarország legnagyobb egyetemi hallgatók által szervezett éves technológiai konferenciája. Várunk Téged is április 14-én!"
 				/>
 				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:title" content="18. Simonyi Konferencia" />
+				<meta name="twitter:title" content="XVIII. Simonyi Konferencia" />
 				<meta
 					name="twitter:description"
 					content="Magyarország legnagyobb egyetemi hallgatók által szervezett éves technológiai konferenciája. Várunk Téged is április 14-én!"
@@ -38,7 +38,7 @@ export default function Layout({
 					property="og:image"
 					content="https://konferencia.simonyi.bme.hu/preview.png"
 				/>
-				<meta property="og:title" content="18. Simonyi Konferencia" />
+				<meta property="og:title" content="XVIII. Simonyi Konferencia" />
 				<meta
 					property="og:description"
 					content="Magyarország legnagyobb egyetemi hallgatók által szervezett éves technológiai konferenciája. Várunk Téged is április 14-én!"
