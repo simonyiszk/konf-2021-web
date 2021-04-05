@@ -17,10 +17,7 @@ export default function Standup() {
 					<br />
 					stand-up comedy előadását!
 				</h3>
-				<Link
-					href="https://hopin.com/events/xviii-simonyi-konferencia"
-					passHref
-				>
+				<Link href="https://fb.me/e/1jCeeZwOA" passHref>
 					<Button target="_blank" className="mt-4 md:mt-8">
 						Megnézem
 					</Button>
