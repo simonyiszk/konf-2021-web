@@ -21,22 +21,66 @@ export default function Presentations({ presentations }: PresentationsProps) {
 	const wWidth = useCurrentWidth();
 
 	const refs = presentations.map(() => createRef<HTMLDivElement>());
+	const containerRef = createRef<HTMLDivElement>();
+
+	function easeInOutQuad(t: number, b: number, c: number, d: number) {
+		// eslint-disable-next-line no-param-reassign
+		t /= d / 2;
+		if (t < 1) return (c / 2) * t * t + b;
+		// eslint-disable-next-line no-param-reassign, no-plusplus
+		t--;
+		return (-c / 2) * (t * (t - 2) - 1) + b;
+	}
+
+	function scrollLeft(change: number, duration: number) {
+		if (!containerRef || !containerRef.current) return;
+		const start = containerRef.current.scrollLeft;
+		let currentTime = 0;
+		const increment = 8;
+
+		const animateScroll = () => {
+			if (!containerRef || !containerRef.current) return;
+			currentTime += increment;
+			const val = easeInOutQuad(currentTime, start, change, duration);
+			containerRef.current.scrollLeft = val;
+			if (currentTime < duration) {
+				setTimeout(animateScroll, increment);
+			}
+		};
+		animateScroll();
+	}
 
 	useEffect(() => {
 		refs.forEach((ref) => {
 			if (ref.current) {
 				const clientHeight = ref?.current?.offsetHeight;
 				if (clientHeight) setHeights([...heights, clientHeight]);
-				console.log(clientHeight);
 			}
 		});
 		return () => {};
-	}, [wWidth, refs, heights]);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [wWidth]);
 
 	return (
 		<section className={clsx(styles.section, "scroll-margin")} id="eloadasok">
 			<h2 className="mb-8 text-center text-4xl font-semibold">Előadások</h2>
-			<div className="overflow-x-auto" id="scroll">
+			<div className="sticky z-20 top-20 flex flex-row justify-evenly bg-blue rounded-b-md">
+				<button
+					className="p-3 text-teal text-2xl font-bold hover:bg-blue focus:bg-blue bg-blue-dark rounded-md focus:outline-none"
+					type="button"
+					onClick={() => scrollLeft(-2000, 250)}
+				>
+					IB025
+				</button>
+				<button
+					className="p-3 text-green text-2xl font-bold hover:bg-blue focus:bg-blue bg-blue-dark rounded-md focus:outline-none"
+					type="button"
+					onClick={() => scrollLeft(2000, 250)}
+				>
+					IB026
+				</button>
+			</div>
+			<div className="overflow-x-auto" id="scroll" ref={containerRef}>
 				<div
 					className={clsx(
 						styles.container,

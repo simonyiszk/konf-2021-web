@@ -1,11 +1,43 @@
 .card {
-	@apply text-white font-Roboto bg-blue-dark rounded-md;
-
+	@apply text-white font-Roboto bg-blue-dark rounded-md relative;
 	@screen sm {
 		@apply max-w-screen-sm;
 	}
-
 	max-width: 90vw;
+
+	&:nth-child(2n + 1) {
+		&::before {
+			@apply absolute rounded-full bg-yellow;
+			content: "";
+			top: 10px;
+			right: calc((-128px / 2) - (16px / 2));
+			width: 16px;
+			height: 4px;
+		}
+	}
+
+	&::after {
+		@apply absolute rounded-full font-semibold;
+		counter-reset: content-text-left var(--content-text-left, 12)
+			content-text-right var(--content-text-right, 20);
+		content: counter(content-text-left) ":" counter(content-text-right);
+		top: 0;
+		width: calc((128px / 2));
+	}
+
+	&:nth-child(2n + 1) {
+		&::after {
+			@apply text-teal;
+			right: calc((-128px / 2) - 4px);
+		}
+	}
+
+	&:nth-child(2n) {
+		&::after {
+			@apply text-green text-right;
+			left: calc((-128px / 2) - 4px);
+		}
+	}
 }
 
 .container {

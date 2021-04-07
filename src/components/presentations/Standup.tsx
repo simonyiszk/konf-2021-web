@@ -5,7 +5,7 @@ import Button from "../button/Button";
 
 export default function Standup() {
 	return (
-		<figure className="container flex flex-col-reverse justify-evenly mb-8 mx-auto text-center md:flex-row">
+		<figure className="container flex flex-col-reverse justify-evenly mb-8 mx-auto px-6 text-center md:flex-row">
 			<figcaption className="flex flex-col content-center justify-center md:mr-4">
 				<h3 className="text-xl md:text-2xl">
 					A nap zárásaként hallgasd meg

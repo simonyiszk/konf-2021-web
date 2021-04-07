@@ -7,7 +7,7 @@ import styles from "./Giveaway.module.scss";
 export default function Giveaway() {
 	return (
 		<section
-			className="scroll-margin container mb-8 mx-auto px-3 text-center"
+			className="scroll-margin container mb-8 mx-auto px-6 text-center"
 			id="nyeremenyjatek"
 		>
 			<h2 className="mb-8 text-4xl">Nyereményjáték</h2>

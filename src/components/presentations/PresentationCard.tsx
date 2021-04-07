@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { forwardRef } from "react";
 import tinydate from "tinydate";
@@ -34,8 +35,24 @@ const PresentationCard = forwardRef<HTMLDivElement, PresentationCardProps>(
 		const endDateObj = new Date(endDate ?? "");
 		const stamp = tinydate("{HH}:{mm}");
 
+		const startDateText = stamp(startDateObj);
+
+		const variants = {
+			initial: {
+				"--content-text-left": startDateText.split(":")[0],
+				"--content-text-right": startDateText.split(":")[1],
+				rotation: 0.001,
+			},
+		};
+
 		return (
-			<figure className={clsx(styles.card, className)} ref={ref}>
+			<motion.figure
+				className={clsx(styles.card, className)}
+				ref={ref}
+				// @ts-expect-error: Variants work, I don't know why it is an error
+				variants={variants}
+				initial="initial"
+			>
 				<div className={styles.container}>
 					<div className={styles.imageContainer}>
 						<Image
@@ -69,7 +86,7 @@ const PresentationCard = forwardRef<HTMLDivElement, PresentationCardProps>(
 
 					<div className={styles.content}>{children}</div>
 				</div>
-			</figure>
+			</motion.figure>
 		);
 	},
 );
