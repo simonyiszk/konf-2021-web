@@ -87,6 +87,7 @@ export default function Presentations({ presentations }: PresentationsProps) {
 						"relative grid gap-8 gap-x-32 grid-cols-2 justify-items-center mb-16 mt-4 mx-auto md:gap-16 md:gap-x-32 lg:grid-cols-2",
 					)}
 				>
+					<div className={clsx(styles.timelineBG, "bg-blur-10")} />
 					<div className={styles.timeline} />
 					<div className={styles.time} />
 

@@ -19,9 +19,14 @@
 	overflow-x: auto;
 }
 
+.timelineBG {
+	@apply absolute h-full;
+	width: 128px;
+	left: calc(50% - (128px / 2));
+}
+
 .timeline {
 	@apply absolute h-full border-r-2 border-dashed border-blue-dark;
-
 	left: calc(50% - 1px);
 }
 

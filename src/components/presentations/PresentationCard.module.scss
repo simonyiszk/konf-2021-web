@@ -5,7 +5,7 @@
 	}
 	max-width: 90vw;
 
-	&:nth-child(2n + 1) {
+	&:nth-child(2n) {
 		&::before {
 			@apply absolute rounded-full bg-yellow;
 			content: "";
@@ -25,14 +25,14 @@
 		width: calc((128px / 2));
 	}
 
-	&:nth-child(2n + 1) {
+	&:nth-child(2n) {
 		&::after {
 			@apply text-teal;
 			right: calc((-128px / 2) - 4px);
 		}
 	}
 
-	&:nth-child(2n) {
+	&:nth-child(2n + 1) {
 		&::after {
 			@apply text-green text-right;
 			left: calc((-128px / 2) - 4px);
