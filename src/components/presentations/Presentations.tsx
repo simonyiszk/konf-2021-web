@@ -64,7 +64,7 @@ export default function Presentations({ presentations }: PresentationsProps) {
 	return (
 		<section className={clsx(styles.section, "scroll-margin")} id="eloadasok">
 			<h2 className="mb-8 text-center text-4xl font-semibold">Előadások</h2>
-			<div className="sticky z-20 top-24 flex flex-row justify-evenly rounded-b-md">
+			<div className="sticky z-20 top-24 flex flex-row justify-evenly rounded-b-md xl:static">
 				<button
 					className={styles.button1}
 					type="button"
@@ -84,7 +84,7 @@ export default function Presentations({ presentations }: PresentationsProps) {
 				<div
 					className={clsx(
 						styles.container,
-						"relative grid gap-8 gap-x-8 grid-cols-2 justify-items-center mb-16 mt-4 mx-auto md:gap-16 md:gap-x-32 lg:grid-cols-2",
+						"relative grid gap-8 gap-x-8 grid-cols-2 justify-items-center mb-16 mt-4 mx-auto md:gap-16 md:gap-x-32",
 					)}
 				>
 					<div className={clsx(styles.timelineBG, "bg-blur-10")} />

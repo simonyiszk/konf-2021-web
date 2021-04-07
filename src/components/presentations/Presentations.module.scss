@@ -18,13 +18,13 @@
 .button1 {
 	@apply p-3 text-blue hover:text-teal focus:text-teal text-2xl font-bold hover:bg-blue focus:bg-blue bg-teal rounded-md focus:outline-none focus:ring-teal focus:ring-4;
 	@screen xl {
-		@apply hover:text-blue focus:text-blue hover:bg-teal focus:bg-teal focus:ring-0;
+		@apply hover:text-blue focus:text-blue hover:bg-teal focus:bg-teal focus:ring-0 cursor-default;
 	}
 }
 .button2 {
 	@apply p-3 text-blue hover:text-green focus:text-green text-2xl font-bold hover:bg-blue focus:bg-blue bg-green rounded-md focus:outline-none focus:ring-green focus:ring-4;
 	@screen xl {
-		@apply hover:text-blue focus:text-blue hover:bg-green focus:bg-green focus:ring-0;
+		@apply hover:text-blue focus:text-blue hover:bg-green focus:bg-green focus:ring-0 cursor-default;
 	}
 }
 
