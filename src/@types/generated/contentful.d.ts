@@ -41,6 +41,9 @@ export interface IOrganiser extends Entry<IOrganiserFields> {
 }
 
 export interface IPresentationFields {
+	/** Side */
+	side: "left" | "right";
+
 	/** order */
 	order: number;
 
@@ -53,14 +56,14 @@ export interface IPresentationFields {
 	/** Profession */
 	profession?: string | undefined;
 
-	/** Image */
-	image: Asset;
-
 	/** Start Date */
 	startDate?: string | undefined;
 
 	/** End Date */
 	endDate?: string | undefined;
+
+	/** Image */
+	image: Asset;
 
 	/** Description */
 	description: string;

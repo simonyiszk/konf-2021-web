@@ -1,23 +1,21 @@
-import type { Entry } from "contentful";
-
 import type { ISponsorLogoFields } from "@/@types/generated/contentful";
 
 import SponsorLogo from "./SponsorLogo";
 import styles from "./SponsorSection.module.scss";
 
 type SponsorProps = {
-	sponsors: Array<Entry<ISponsorLogoFields>>;
+	sponsors: ISponsorLogoFields[];
 };
 
 export default function SponsorSection({ sponsors }: SponsorProps) {
 	const gold = sponsors.filter(
-		(sponsor) => sponsor.fields.sponsorshipGrade === "főtámogató",
+		(sponsor) => sponsor.sponsorshipGrade === "főtámogató",
 	);
 	const silver = sponsors.filter(
-		(sponsor) => sponsor.fields.sponsorshipGrade === "kiemelt támogató",
+		(sponsor) => sponsor.sponsorshipGrade === "kiemelt támogató",
 	);
 	const bronze = sponsors.filter(
-		(sponsor) => sponsor.fields.sponsorshipGrade === "támogató",
+		(sponsor) => sponsor.sponsorshipGrade === "támogató",
 	);
 	return (
 		<section className={styles.section}>
@@ -26,13 +24,7 @@ export default function SponsorSection({ sponsors }: SponsorProps) {
 				<h4>Főtámogatónk</h4>
 				<div className={styles.containerOne}>
 					{gold.map((sponsor) => {
-						return (
-							<SponsorLogo
-								key={sponsor.fields.name}
-								{...sponsor.fields}
-								size={232}
-							/>
-						);
+						return <SponsorLogo key={sponsor.name} {...sponsor} size={232} />;
 					})}
 				</div>
 			</div>
@@ -40,13 +32,7 @@ export default function SponsorSection({ sponsors }: SponsorProps) {
 				<h4>Kiemelt támogatóink</h4>
 				<div className={styles.containerMany}>
 					{silver.map((sponsor) => {
-						return (
-							<SponsorLogo
-								key={sponsor.fields.name}
-								{...sponsor.fields}
-								size={172}
-							/>
-						);
+						return <SponsorLogo key={sponsor.name} {...sponsor} size={172} />;
 					})}
 				</div>
 			</div>
@@ -54,13 +40,7 @@ export default function SponsorSection({ sponsors }: SponsorProps) {
 				<h4>További támogatóink</h4>
 				<div className={styles.containerMany}>
 					{bronze.map((sponsor) => {
-						return (
-							<SponsorLogo
-								key={sponsor.fields.name}
-								{...sponsor.fields}
-								size={128}
-							/>
-						);
+						return <SponsorLogo key={sponsor.name} {...sponsor} size={128} />;
 					})}
 				</div>
 			</div>
