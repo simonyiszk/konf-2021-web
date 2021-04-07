@@ -39,7 +39,7 @@ const PresentationCard = forwardRef<HTMLDivElement, PresentationCardProps>(
 			<motion.figure className={clsx(styles.card, className)} ref={ref}>
 				<span
 					className={clsx(
-						"absolute top-0 font-semibold",
+						"absolute top-0 hidden font-semibold sm:inline-block",
 						isLeft ? "text-teal text-left" : "text-green text-right",
 					)}
 					style={{
