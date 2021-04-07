@@ -37,10 +37,13 @@ const PresentationCard = forwardRef<HTMLDivElement, PresentationCardProps>(
 
 		const startDateText = stamp(startDateObj);
 
+		const h = parseInt(startDateText.split(":")[0], 10);
+		const m = parseInt(startDateText.split(":")[1], 10);
+
 		const variants = {
 			initial: {
-				"--content-text-left": startDateText.split(":")[0],
-				"--content-text-right": startDateText.split(":")[1],
+				"--content-text-left": h,
+				"--content-text-right": m,
 			},
 		};
 
