@@ -40,6 +40,7 @@ export default function SponsorLogo({
 					src={`https:${image.fields.file.url}`}
 					width={image.fields.file.details.image?.width ?? 400}
 					height={image.fields.file.details.image?.height ?? 250}
+					alt={name}
 				/>
 			</div>
 		</ConditionalWrapper>

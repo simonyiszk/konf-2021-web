@@ -18,6 +18,8 @@ type PresentationsProps = {
 export default function Presentations({ presentations }: PresentationsProps) {
 	const [heights, setHeights] = useState<number[]>([]);
 
+	const [side, setSide] = useState(false);
+
 	const wWidth = useCurrentWidth();
 
 	const refs = presentations.map(() => createRef<HTMLDivElement>());
@@ -32,8 +34,9 @@ export default function Presentations({ presentations }: PresentationsProps) {
 		return (-c / 2) * (t * (t - 2) - 1) + b;
 	}
 
-	function scrollLeft(change: number, duration: number) {
+	function scrollLeft(change: number, duration: number, s: boolean) {
 		if (!containerRef || !containerRef.current) return;
+
 		const start = containerRef.current.scrollLeft;
 		let currentTime = 0;
 		const increment = 8;
@@ -45,6 +48,8 @@ export default function Presentations({ presentations }: PresentationsProps) {
 			containerRef.current.scrollLeft = val;
 			if (currentTime < duration) {
 				setTimeout(animateScroll, increment);
+			} else {
+				setSide(s);
 			}
 		};
 		animateScroll();
@@ -66,16 +71,32 @@ export default function Presentations({ presentations }: PresentationsProps) {
 			<h2 className="mb-8 text-center text-4xl font-semibold">Előadások</h2>
 			<div className="sticky z-20 top-24 flex flex-row justify-evenly rounded-b-md xl:static">
 				<button
-					className={styles.button1}
+					className={clsx(
+						styles.button1,
+						"p-3 hover:text-teal text-2xl font-bold hover:bg-blue rounded-md focus:outline-none",
+						side === false
+							? "text-teal bg-blue ring-4 ring-teal"
+							: "text-blue bg-teal",
+					)}
 					type="button"
-					onClick={() => scrollLeft(-2000, 250)}
+					onClick={() => {
+						scrollLeft(-2000, 250, false);
+					}}
 				>
 					IB025
 				</button>
 				<button
-					className={styles.button2}
+					className={clsx(
+						styles.button2,
+						"p-3 hover:text-green text-2xl font-bold hover:bg-blue rounded-md focus:outline-none",
+						side === true
+							? "text-green bg-blue ring-4 ring-green"
+							: "text-blue bg-green",
+					)}
 					type="button"
-					onClick={() => scrollLeft(2000, 250)}
+					onClick={() => {
+						scrollLeft(2000, 250, true);
+					}}
 				>
 					IB026
 				</button>

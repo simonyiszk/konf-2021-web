@@ -16,15 +16,13 @@
 }
 
 .button1 {
-	@apply p-3 text-blue hover:text-teal focus:text-teal text-2xl font-bold hover:bg-blue focus:bg-blue bg-teal rounded-md focus:outline-none focus:ring-teal focus:ring-4;
 	@screen xl {
-		@apply hover:text-blue focus:text-blue hover:bg-teal focus:bg-teal focus:ring-0 cursor-default;
+		@apply text-blue bg-teal hover:text-blue hover:bg-teal ring-0 cursor-default;
 	}
 }
 .button2 {
-	@apply p-3 text-blue hover:text-green focus:text-green text-2xl font-bold hover:bg-blue focus:bg-blue bg-green rounded-md focus:outline-none focus:ring-green focus:ring-4;
 	@screen xl {
-		@apply hover:text-blue focus:text-blue hover:bg-green focus:bg-green focus:ring-0 cursor-default;
+		@apply text-blue bg-green hover:text-blue hover:bg-green ring-0 cursor-default;
 	}
 }
 
@@ -34,19 +32,19 @@
 
 .timelineBG {
 	@apply absolute h-full hidden;
-	left: calc(50% - (128px / 2));
-	width: 128px;
 	@screen sm {
 		@apply block;
 	}
+	left: calc(50% - (128px / 2));
+	width: 128px;
 }
 
 .timeline {
 	@apply absolute h-full border-r-2 border-dashed border-blue-dark hidden;
-	left: calc(50% - 1px);
 	@screen sm {
 		@apply block;
 	}
+	left: calc(50% - 1px);
 }
 
 .time {

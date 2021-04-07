@@ -5,18 +5,6 @@
 	}
 	max-width: 90vw;
 
-	@screen sm {
-		&:nth-child(2n) {
-			&::before {
-				@apply absolute rounded-full bg-yellow;
-				content: "";
-				top: 10px;
-				right: calc((-128px / 2) - (16px / 2));
-				width: 16px;
-				height: 4px;
-			}
-		}
-	}
 	& > span {
 		width: calc((128px / 2));
 	}

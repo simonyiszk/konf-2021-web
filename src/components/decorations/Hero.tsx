@@ -4,7 +4,6 @@ import Link from "next/link";
 
 import Button from "../button/Button";
 import { Svg18 } from "./Decorations";
-import styles from "./Hero.module.scss";
 import HeroBackground from "./HeroBackground";
 
 export default function Hero() {
