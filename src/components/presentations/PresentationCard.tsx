@@ -35,26 +35,20 @@ const PresentationCard = forwardRef<HTMLDivElement, PresentationCardProps>(
 		const endDateObj = new Date(endDate ?? "");
 		const stamp = tinydate("{HH}:{mm}");
 
-		const startDateText = stamp(startDateObj);
-
-		const h = parseInt(startDateText.split(":")[0], 10);
-		const m = parseInt(startDateText.split(":")[1], 10);
-
-		const variants = {
-			initial: {
-				"--content-text-left": h,
-				"--content-text-right": m,
-			},
-		};
-
 		return (
-			<motion.figure
-				className={clsx(styles.card, className)}
-				ref={ref}
-				// @ts-expect-error: Variants work, I don't know why it is an error
-				variants={variants}
-				initial="initial"
-			>
+			<motion.figure className={clsx(styles.card, className)} ref={ref}>
+				<span
+					className={clsx(
+						"absolute top-0 font-semibold",
+						isLeft ? "text-teal text-left" : "text-green text-right",
+					)}
+					style={{
+						left: isLeft ? "" : "calc((-128px / 2) - 4px)",
+						right: isLeft ? "calc((-128px / 2) - 4px)" : "",
+					}}
+				>
+					{stamp(startDateObj)}
+				</span>
 				<div className={styles.container}>
 					<div className={styles.imageContainer}>
 						<Image
