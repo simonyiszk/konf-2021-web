@@ -64,16 +64,16 @@ export default function Presentations({ presentations }: PresentationsProps) {
 	return (
 		<section className={clsx(styles.section, "scroll-margin")} id="eloadasok">
 			<h2 className="mb-8 text-center text-4xl font-semibold">Előadások</h2>
-			<div className="sticky z-20 top-20 flex flex-row justify-evenly bg-blue rounded-b-md">
+			<div className="sticky z-20 top-24 flex flex-row justify-evenly rounded-b-md">
 				<button
-					className="p-3 text-teal text-2xl font-bold hover:bg-blue focus:bg-blue bg-blue-dark rounded-md focus:outline-none"
+					className={styles.button1}
 					type="button"
 					onClick={() => scrollLeft(-2000, 250)}
 				>
 					IB025
 				</button>
 				<button
-					className="p-3 text-green text-2xl font-bold hover:bg-blue focus:bg-blue bg-blue-dark rounded-md focus:outline-none"
+					className={styles.button2}
 					type="button"
 					onClick={() => scrollLeft(2000, 250)}
 				>
@@ -84,7 +84,7 @@ export default function Presentations({ presentations }: PresentationsProps) {
 				<div
 					className={clsx(
 						styles.container,
-						"relative grid gap-8 gap-x-32 grid-cols-2 justify-items-center mb-16 mt-4 mx-auto md:gap-16 md:gap-x-32 lg:grid-cols-2",
+						"relative grid gap-8 gap-x-8 grid-cols-2 justify-items-center mb-16 mt-4 mx-auto md:gap-16 md:gap-x-32 lg:grid-cols-2",
 					)}
 				>
 					<div className={clsx(styles.timelineBG, "bg-blur-10")} />

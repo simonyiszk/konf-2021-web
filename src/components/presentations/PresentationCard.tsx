@@ -41,7 +41,6 @@ const PresentationCard = forwardRef<HTMLDivElement, PresentationCardProps>(
 			initial: {
 				"--content-text-left": startDateText.split(":")[0],
 				"--content-text-right": startDateText.split(":")[1],
-				rotation: 0.001,
 			},
 		};
 
