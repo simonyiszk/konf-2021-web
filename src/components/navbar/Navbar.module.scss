@@ -11,6 +11,8 @@
 }
 
 .navlink {
+	outline: none;
+
 	&::after {
 		@apply border-t-2 border-yellow rounded-full block;
 		content: "";

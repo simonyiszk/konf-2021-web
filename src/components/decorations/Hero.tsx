@@ -1,6 +1,8 @@
 import clsx from "clsx";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
+import Button from "../button/Button";
 import { Svg18 } from "./Decorations";
 import styles from "./Hero.module.scss";
 import HeroBackground from "./HeroBackground";
@@ -8,7 +10,7 @@ import HeroBackground from "./HeroBackground";
 export default function Hero() {
 	return (
 		<section
-			className="relative w-full h-screen overflow-hidden"
+			className="relative w-full h-screen bg-blue overflow-hidden"
 			id="hero-container"
 		>
 			<HeroBackground />
@@ -85,18 +87,14 @@ export default function Hero() {
 							/>
 						</div>
 					</div>
-					<motion.a
+					<Link
 						href="https://hopin.com/events/xviii-simonyi-konferencia"
-						target="_blank"
-						rel="noopener"
-						className={styles.button}
-						style={{ willChange: "top, opacity" }}
-						animate={{ opacity: 1, top: 0 }}
-						transition={{ delay: 3.5, duration: 0.75 }}
-						initial={{ opacity: 0, top: 30 }}
+						passHref
 					>
-						Regisztráció
-					</motion.a>
+						<Button target="_blank" className="mt-20" isDelayed>
+							Regisztráció
+						</Button>
+					</Link>
 				</div>
 			</div>
 		</section>

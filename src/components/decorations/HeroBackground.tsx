@@ -35,7 +35,7 @@ export default function HeroBackground() {
 			<DottedCircle
 				width="500"
 				height="500"
-				className="absolute -left-32 -top-48 hidden sm:block"
+				className="absolute -left-28 -top-48 hidden sm:block"
 			/>
 
 			<div className="absolute left-6 top-8 grid gap-3 grid-cols-5 sm:top-28 xl:left-28">

@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { motion, useViewportScroll } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import { FaBars } from "react-icons/fa";
 
@@ -13,6 +14,7 @@ export default function Navbar() {
 	const [isNavbarOpen, setNavbarOpen] = React.useState(false);
 	const [isNavbarVisible, setNavbarVisible] = React.useState(false);
 	const { scrollY } = useViewportScroll();
+	const router = useRouter();
 
 	React.useEffect(() => {
 		scrollY.onChange((latest: number) => {
@@ -26,9 +28,12 @@ export default function Navbar() {
 		return () => {};
 	}, [scrollY, isNavbarVisible, isNavbarOpen]);
 
-	function scrollToTop() {
+	function homeButton() {
 		setNavbarOpen(false);
 		window.scrollTo(0, 0);
+		if (router.pathname !== "/") {
+			router.push("/");
+		}
 	}
 
 	const variants = {
@@ -57,8 +62,8 @@ export default function Navbar() {
 				<div className="relative flex justify-between w-full sm:static sm:block sm:justify-start sm:w-auto">
 					<span
 						className="flex items-center mr-4 no-underline text-2xl cursor-pointer lg:text-4xl lg:leading-10"
-						onClick={scrollToTop}
-						onKeyPress={scrollToTop}
+						onClick={homeButton}
+						onKeyPress={homeButton}
 						role="button"
 						tabIndex={0}
 					>
@@ -85,7 +90,7 @@ export default function Navbar() {
 					<ul className="flex flex-col w-full rounded-lg list-none sm:flex-row sm:ml-auto sm:w-auto">
 						{navbarContent.links.map(({ href, label }, i) => (
 							<li key={`${href}`} className="pl-2 py-1 w-full sm:pl-0">
-								<Link href={href}>
+								<Link href={href} passHref>
 									<motion.a
 										role="link"
 										tabIndex={i}

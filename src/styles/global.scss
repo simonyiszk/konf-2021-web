@@ -14,6 +14,17 @@ body {
 	margin: 0 auto;
 }
 
+main {
+	background-image: url("/assets/images/mobile.png");
+	background-size: 100% auto;
+	background-repeat: repeat-y;
+	background-position: 0 100vh;
+	@screen md {
+		background-image: url("/assets/images/desktop.png");
+		background-position: 0 100vh;
+	}
+}
+
 #hero-text {
 	grid-template-columns: max-content auto;
 }
