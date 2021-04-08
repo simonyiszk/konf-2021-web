@@ -10,7 +10,7 @@ export default function Giveaway() {
 			className="scroll-margin container mb-8 mx-auto px-6 text-center"
 			id="nyeremenyjatek"
 		>
-			<h2 className="mb-8 text-4xl">Nyereményjáték</h2>
+			<h2 className="mb-8 text-4xl font-semibold">Nyereményjáték</h2>
 			<h3 className="mb-3 text-2xl">
 				Regisztrálj és nyerj egy{" "}
 				<span className="text-yellow">ultrawide monitort</span> az expón és
