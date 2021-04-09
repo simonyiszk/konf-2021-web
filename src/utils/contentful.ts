@@ -4,7 +4,10 @@ import renderToString from "next-mdx-remote/render-to-string";
 import type { MdxRemote } from "next-mdx-remote/types";
 
 import type {
+	IBreak,
+	IBreakFields,
 	IOrganiserFields,
+	IPresentation,
 	IPresentationFields,
 	ISponsorLogoFields,
 } from "@/@types/generated/contentful";
@@ -31,8 +34,8 @@ function orderEntriesByOrder(
 }
 
 function orderEntriesByDate(
-	a: Entry<IPresentationFields>,
-	b: Entry<IPresentationFields>,
+	a: Entry<IPresentationFields> | Entry<IBreakFields>,
+	b: Entry<IPresentationFields> | Entry<IBreakFields>,
 ): number {
 	if (!a.fields.startDate || !b.fields.startDate) return 0;
 
@@ -41,6 +44,7 @@ function orderEntriesByDate(
 		a.fields.side.localeCompare(b.fields.side)
 	);
 }
+
 export async function getCmsData() {
 	const presentations = await client.getEntries<IPresentationFields>({
 		content_type: "presentation",
@@ -51,16 +55,42 @@ export async function getCmsData() {
 	presentations.items.sort(orderEntriesByDate);
 
 	const renderedPresentations: Array<
-		IPresentationFields & { mdxSource: MdxRemote.Source }
+		IPresentation & { mdxSource: MdxRemote.Source }
 	> = await Promise.all(
 		presentations.items.map(async (item) => {
 			const mdxSource = await renderToString(item.fields.description);
-			return {
+			// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+			const r = {
 				mdxSource,
-				...item.fields,
-			};
+				...item,
+			} as IPresentation & { mdxSource: MdxRemote.Source };
+			return r;
 		}),
 	);
+
+	const breaks = await client.getEntries<IBreakFields>({
+		content_type: "break",
+	});
+
+	breaks.items.sort(orderEntriesByDate);
+
+	const renderedBreaks: Array<
+		IBreak & { mdxSource: MdxRemote.Source }
+	> = await Promise.all(
+		breaks.items.map(async (item) => {
+			const mdxSource = await renderToString(item.fields.text);
+			// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+			const r = {
+				mdxSource,
+				...item,
+			} as IBreak & { mdxSource: MdxRemote.Source };
+			return r;
+		}),
+	);
+
+	const combined = [...renderedPresentations, ...renderedBreaks];
+
+	combined.sort(orderEntriesByDate);
 
 	const organisers = await client.getEntries<IOrganiserFields>({
 		content_type: "organiser",
@@ -75,7 +105,7 @@ export async function getCmsData() {
 	const flattenedSponsors = sponsors.items.map((item) => item.fields);
 
 	return {
-		presentations: renderedPresentations,
+		presentations: combined,
 		organisers: flattenedOrganisers,
 		sponsors: flattenedSponsors,
 	};
