@@ -3,16 +3,21 @@ import hydrate from "next-mdx-remote/hydrate";
 import type { MdxRemote } from "next-mdx-remote/types";
 import React, { createRef, useEffect, useState } from "react";
 
-import type { IPresentationFields } from "@/@types/generated/contentful";
+import type { IBreak, IPresentation } from "@/@types/generated/contentful";
 import { useCurrentWidth } from "@/utils/hooks";
 
 import Br from "../customDefaults/Br";
+import H3 from "../customDefaults/H3";
 import H5 from "../customDefaults/H5";
+import BreakCard from "./BreakCard";
 import PresentationCard from "./PresentationCard";
 import styles from "./Presentations.module.scss";
 
 type PresentationsProps = {
-	presentations: Array<IPresentationFields & { mdxSource: MdxRemote.Source }>;
+	presentations: Array<
+		| (IPresentation & { mdxSource: MdxRemote.Source })
+		| (IBreak & { mdxSource: MdxRemote.Source })
+	>;
 };
 
 export default function Presentations({ presentations }: PresentationsProps) {
@@ -113,26 +118,43 @@ export default function Presentations({ presentations }: PresentationsProps) {
 					<div className={styles.time} />
 
 					{presentations.map((entry, i) => {
-						const presentationContent = hydrate(entry.mdxSource, {
-							components: { h5: H5, br: Br },
+						const content = hydrate(entry.mdxSource, {
+							components: { h5: H5, h3: H3, br: Br },
 						});
-						const imageUrl = entry.image
-							? `https:${entry.image.fields.file.url}`
-							: "/assets/images/blank.png";
+						if (entry.sys.contentType.sys.id === "presentation") {
+							const local = entry as IPresentation;
+							const imageUrl = local.fields.image
+								? `https:${local.fields.image.fields.file.url}`
+								: "/assets/images/blank.png";
 
-						return (
-							<PresentationCard
-								key={entry.name}
-								{...entry}
-								id={i % 2 === 0 ? `${Math.floor((i + 2) / 2)}-row` : undefined}
-								isLeft={i % 2 === 0}
-								imageURL={imageUrl}
-								className={clsx(i % 2 === 0 ? "ml-auto" : "mr-auto")}
-								ref={refs[i]}
-							>
-								{presentationContent}
-							</PresentationCard>
-						);
+							return (
+								<PresentationCard
+									key={local.fields.name}
+									{...local.fields}
+									isLeft={i % 2 === 0}
+									imageURL={imageUrl}
+									className={clsx(i % 2 === 0 ? "ml-auto" : "mr-auto")}
+									ref={refs[i]}
+								>
+									{content}
+								</PresentationCard>
+							);
+						}
+						if (entry.sys.contentType.sys.id === "break") {
+							const local = entry as IBreak;
+							return (
+								<BreakCard
+									key={`${local.fields.startDate}+${local.fields.side}`}
+									{...local.fields}
+									isLeft={i % 2 === 0}
+									className={clsx(i % 2 === 0 ? "ml-auto" : "mr-auto")}
+									ref={refs[i]}
+								>
+									{content}
+								</BreakCard>
+							);
+						}
+						return null;
 					})}
 				</div>
 			</div>
