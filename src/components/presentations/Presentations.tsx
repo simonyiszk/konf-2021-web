@@ -74,6 +74,10 @@ export default function Presentations({ presentations }: PresentationsProps) {
 	return (
 		<section className={clsx(styles.section, "scroll-margin")} id="eloadasok">
 			<h2 className="mb-8 text-center text-4xl font-semibold">Előadások</h2>
+			<div className="mb-10 text-center text-2xl">
+				<p>Az előadások idén online lesznek közvetítve.</p>
+				<p>A platformot a Regisztráció gombra kattintva lehet elérni.</p>
+			</div>
 			<div className="sticky z-20 top-24 flex flex-row justify-evenly rounded-b-md xl:static">
 				<button
 					className={clsx(
