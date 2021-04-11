@@ -9,6 +9,11 @@ const nextConfig = {
 	async redirects() {
 		return [
 			{
+				source: "/hopin",
+				destination: "https://hopin.com/events/xviii-simonyi-konferencia",
+				permanent: true,
+			},
+			{
 				source: "/2019",
 				destination: "https://regi.konferencia.simonyi.bme.hu/",
 				permanent: true,
