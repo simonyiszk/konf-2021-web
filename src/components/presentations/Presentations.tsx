@@ -110,11 +110,11 @@ export default function Presentations({ presentations }: PresentationsProps) {
 					IB026
 				</button>
 			</div>
-			<div className="overflow-x-auto" id="scroll" ref={containerRef}>
+			<div className="overflow-x-auto xl:-mt-14" id="scroll" ref={containerRef}>
 				<div
 					className={clsx(
 						styles.container,
-						"relative grid gap-8 gap-x-8 grid-cols-2 justify-items-center mb-16 mt-8 mx-auto sm:gap-16 sm:gap-x-32",
+						"relative grid gap-8 gap-x-8 grid-cols-2 justify-items-center mb-8 mt-8 mx-auto sm:gap-16 sm:gap-x-32 xl:mt-0",
 					)}
 				>
 					<div className={styles.timeline} />
@@ -163,6 +163,14 @@ export default function Presentations({ presentations }: PresentationsProps) {
 						}
 						return null;
 					})}
+					<div className="grid col-span-2 grid-cols-2 justify-items-center w-full">
+						<div className="z-10 -mb-4 p-1 w-16 text-center text-blue text-lg font-semibold bg-yellow rounded-md sm:col-span-2">
+							18:00
+						</div>
+						<div className="z-10 -mb-4 p-1 w-16 text-center text-blue text-lg font-semibold bg-yellow rounded-md sm:hidden">
+							18:00
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
