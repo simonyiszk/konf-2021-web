@@ -42,3 +42,13 @@
 	@apply col-span-2 mt-4;
 	font-size: 15px;
 }
+
+.underlinedH3 {
+	& h3 {
+		&::after {
+			@apply border-t-2 border-yellow rounded-full block w-full;
+			content: "";
+			margin-top: 0;
+		}
+	}
+}
