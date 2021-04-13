@@ -81,8 +81,8 @@ export default function Presentations({ presentations }: PresentationsProps) {
 			<div className="sticky z-20 top-24 flex flex-row justify-evenly rounded-b-md xl:static">
 				<button
 					className={clsx(
+						styles.button,
 						styles.button1,
-						"p-3 hover:text-teal text-2xl font-bold hover:bg-blue rounded-md focus:outline-none",
 						side === false
 							? "text-teal bg-blue ring-4 ring-teal"
 							: "text-blue bg-teal",
@@ -96,8 +96,8 @@ export default function Presentations({ presentations }: PresentationsProps) {
 				</button>
 				<button
 					className={clsx(
+						styles.button,
 						styles.button2,
-						"p-3 hover:text-green text-2xl font-bold hover:bg-blue rounded-md focus:outline-none",
 						side === true
 							? "text-green bg-blue ring-4 ring-green"
 							: "text-blue bg-green",
@@ -114,10 +114,9 @@ export default function Presentations({ presentations }: PresentationsProps) {
 				<div
 					className={clsx(
 						styles.container,
-						"relative grid gap-8 gap-x-8 grid-cols-2 justify-items-center mb-16 mt-4 mx-auto sm:gap-16 sm:gap-x-32",
+						"relative grid gap-8 gap-x-8 grid-cols-2 justify-items-center mb-16 mt-8 mx-auto sm:gap-16 sm:gap-x-32",
 					)}
 				>
-					<div className={clsx(styles.timelineBG, "bg-blur-10")} />
 					<div className={styles.timeline} />
 					<div className={styles.time} />
 
@@ -135,9 +134,11 @@ export default function Presentations({ presentations }: PresentationsProps) {
 								<PresentationCard
 									key={local.fields.name}
 									{...local.fields}
-									isLeft={i % 2 === 0}
+									isLeft={local.fields.side === "left"}
 									imageURL={imageUrl}
-									className={clsx(i % 2 === 0 ? "ml-auto" : "mr-auto")}
+									className={clsx(
+										local.fields.side === "left" ? "ml-auto" : "mr-auto",
+									)}
 									ref={refs[i]}
 								>
 									{content}
@@ -150,8 +151,10 @@ export default function Presentations({ presentations }: PresentationsProps) {
 								<BreakCard
 									key={`${local.fields.startDate}+${local.fields.side}`}
 									{...local.fields}
-									isLeft={i % 2 === 0}
-									className={clsx(i % 2 === 0 ? "ml-auto" : "mr-auto")}
+									isLeft={local.fields.side === "left"}
+									className={clsx(
+										local.fields.side === "left" ? "ml-auto" : "mr-auto",
+									)}
 									ref={refs[i]}
 								>
 									{content}

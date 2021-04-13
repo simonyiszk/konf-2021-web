@@ -15,6 +15,9 @@ export interface IBreakFields {
 
 	/** Text */
 	text: string;
+
+	/** Is Double */
+	isDouble: boolean;
 }
 
 export interface IBreak extends Entry<IBreakFields> {
@@ -27,34 +30,6 @@ export interface IBreak extends Entry<IBreakFields> {
 		contentType: {
 			sys: {
 				id: "break";
-				linkType: "ContentType";
-				type: "Link";
-			};
-		};
-	};
-}
-
-export interface IOpeningFields {
-	/** Text */
-	text: string;
-
-	/** Start Date */
-	startDate: string;
-
-	/** End Date */
-	endDate: string;
-}
-
-export interface IOpening extends Entry<IOpeningFields> {
-	sys: {
-		id: string;
-		type: string;
-		createdAt: string;
-		updatedAt: string;
-		locale: string;
-		contentType: {
-			sys: {
-				id: "opening";
 				linkType: "ContentType";
 				type: "Link";
 			};
@@ -183,7 +158,6 @@ export interface ISponsorLogo extends Entry<ISponsorLogoFields> {
 
 export type CONTENT_TYPE =
 	| "break"
-	| "opening"
 	| "organiser"
 	| "presentation"
 	| "sponsorLogo";

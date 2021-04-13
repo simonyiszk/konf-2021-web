@@ -15,6 +15,10 @@
 	@apply p-3 mt-8 relative;
 }
 
+.button {
+	@apply z-20 p-3 hover:text-green text-2xl font-bold hover:bg-blue rounded-md focus:outline-none;
+}
+
 .button1 {
 	@screen xl {
 		@apply text-blue bg-teal hover:text-blue hover:bg-teal ring-0 cursor-default;
