@@ -2,6 +2,7 @@ import clsx from "clsx";
 import hydrate from "next-mdx-remote/hydrate";
 import type { MdxRemote } from "next-mdx-remote/types";
 import React, { createRef, useEffect, useState } from "react";
+import YouTube from "react-youtube";
 
 import type { IBreak, IPresentation } from "@/@types/generated/contentful";
 import { useCurrentWidth } from "@/utils/hooks";
@@ -110,15 +111,28 @@ export default function Presentations({ presentations }: PresentationsProps) {
 					IB026
 				</button>
 			</div>
-			<div className="overflow-x-auto xl:-mt-14" id="scroll" ref={containerRef}>
+			<div className="overflow-x-auto" id="scroll" ref={containerRef}>
 				<div
 					className={clsx(
 						styles.container,
-						"relative grid gap-8 gap-x-8 grid-cols-2 justify-items-center mb-8 mt-8 mx-auto sm:gap-16 sm:gap-x-32 xl:mt-0",
+						"relative grid gap-8 gap-x-8 grid-cols-2 justify-items-center mb-8 mt-8 mx-auto sm:gap-16 sm:gap-x-32",
 					)}
 				>
 					<div className={styles.timeline} />
 					<div className={styles.time} />
+
+					<div className={clsx(styles.video, "ml-auto")}>
+						<YouTube
+							videoId="decGVnT9Rj4"
+							containerClassName="aspect-w-16 aspect-h-9"
+						/>
+					</div>
+					<div className={clsx(styles.video, "mr-auto")}>
+						<YouTube
+							videoId="2I2uirLBb68"
+							containerClassName="aspect-w-16 aspect-h-9"
+						/>
+					</div>
 
 					{presentations.map((entry, i) => {
 						const content = hydrate(entry.mdxSource, {

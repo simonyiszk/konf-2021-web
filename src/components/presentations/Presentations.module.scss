@@ -65,3 +65,10 @@
 	// 	@apply block;
 	// }
 }
+
+.video {
+	@apply w-full;
+	@screen sm {
+		@apply max-w-screen-sm;
+	}
+}
