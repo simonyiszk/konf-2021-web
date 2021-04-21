@@ -56,7 +56,7 @@ export default function Footer() {
 				</div>
 				<a
 					className="flex items-center mx-auto"
-					href="https://vercel.com?utm_source=simonyi-konf&utm_campaign=oss"
+					href="https://vercel.com?utm_source=kir-dev&utm_campaign=oss"
 					target="_blank"
 					rel="noopener"
 				>
