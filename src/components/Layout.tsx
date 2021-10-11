@@ -21,7 +21,7 @@ export default function Layout({
 					content="Magyarország legnagyobb egyetemi hallgatók által szervezett éves technológiai konferenciája. Várunk Téged is április 14-én!"
 				/>
 				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:title" content="XVIII. Simonyi Konferencia" />
+				<meta name="twitter:title" content="18. Simonyi Konferencia" />
 				<meta
 					name="twitter:description"
 					content="Magyarország legnagyobb egyetemi hallgatók által szervezett éves technológiai konferenciája. Várunk Téged is április 14-én!"
