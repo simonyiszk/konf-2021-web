@@ -38,7 +38,7 @@ export default function Layout({
 					property="og:image"
 					content="https://konferencia.simonyi.bme.hu/preview.png"
 				/>
-				<meta property="og:title" content="XVIII. Simonyi Konferencia" />
+				<meta property="og:title" content="18. Simonyi Konferencia" />
 				<meta
 					property="og:description"
 					content="Magyarország legnagyobb egyetemi hallgatók által szervezett éves technológiai konferenciája. Várunk Téged is április 14-én!"
