@@ -8,45 +8,61 @@ import {
 export default function Footer() {
 	return (
 		<footer className="z-20 p-8 w-full text-white bg-yellow" id="footer">
-			<div className="container flex flex-col items-center justify-center mx-auto space-y-6">
-				<div className="flex items-center justify-evenly w-full lg:w-1/3">
+			<div className="container flex flex-col justify-center items-center mx-auto space-y-6">
+				<div className="flex justify-evenly items-center w-full lg:w-1/3">
 					<a href="mailto:konferencia@simonyi.bme.hu">
-						<FaEnvelope className="w-10 h-auto hover:text-blue text-blue-dark" />
+						<FaEnvelope className="w-10 h-auto text-blue-dark hover:text-blue" />
 					</a>
 					<a
 						href="https://www.instagram.com/simonyikonf/"
 						target="_blank"
-						rel="noopener"
+						rel="noopener noreferrer"
 					>
-						<FaInstagram className="w-10 h-auto hover:text-blue text-blue-dark" />
+						<FaInstagram className="w-10 h-auto text-blue-dark hover:text-blue" />
 					</a>
-					<a href="https://fb.me/e/1ayaVpuDp" target="_blank" rel="noopener">
-						<FaFacebookSquare className="w-10 h-auto hover:text-blue text-blue-dark" />
+					<a
+						href="https://fb.me/e/1ayaVpuDp"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<FaFacebookSquare className="w-10 h-auto text-blue-dark hover:text-blue" />
 					</a>
 					<a
 						href="https://www.youtube.com/user/SimonyiSzakkoli/"
 						target="_blank"
-						rel="noopener"
+						rel="noopener noreferrer"
 					>
-						<FaYoutube className="w-10 h-auto hover:text-blue text-blue-dark" />
+						<FaYoutube className="w-10 h-auto text-blue-dark hover:text-blue" />
 					</a>
 				</div>
-				<div className="grid gap-4 grid-cols-1 items-center justify-items-center w-full lg:grid-cols-3 lg:w-auto">
-					<a href="https://simonyi.bme.hu" target="_blank" rel="noopener">
+				<div className="grid grid-cols-1 lg:grid-cols-3 gap-4 justify-items-center items-center w-full lg:w-auto">
+					<a
+						href="https://simonyi.bme.hu"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<img
 							src="/assets/images/simonyi_color.svg"
 							alt="Simonyi Károly Szakkollégium"
 							className="w-auto h-16"
 						/>
 					</a>
-					<a href="https://vik.bme.hu" target="_blank" rel="noopener">
+					<a
+						href="https://vik.bme.hu"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<img
 							src="/assets/images/VIK.svg"
 							alt="Villamosmérnöki és Informatikai Kar"
 							className="w-auto h-16"
 						/>
 					</a>
-					<a href="https://schdesign.hu" target="_blank" rel="noopener">
+					<a
+						href="https://schdesign.hu"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<img
 							src="/assets/images/schdesign.svg"
 							alt="schdesign"
@@ -58,7 +74,7 @@ export default function Footer() {
 					className="flex items-center mx-auto"
 					href="https://vercel.com?utm_source=kir-dev&utm_campaign=oss"
 					target="_blank"
-					rel="noopener"
+					rel="noopener noreferrer"
 				>
 					<svg
 						width="168"

@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 module.exports = {
 	purge: {
 		content: ["./src/**/*.{js,jsx,ts,tsx,mdx,css,scss}"],
@@ -50,3 +51,4 @@ module.exports = {
 	},
 	plugins: [require("@tailwindcss/aspect-ratio")],
 };
+/* eslint-enable global-require */

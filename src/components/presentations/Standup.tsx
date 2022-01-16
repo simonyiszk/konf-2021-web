@@ -5,12 +5,12 @@ import Button from "../button/Button";
 
 export default function Standup() {
 	return (
-		<figure className="container flex flex-col-reverse justify-evenly mb-8 mx-auto px-6 text-center md:flex-row">
-			<figcaption className="flex flex-col content-center justify-center mb-4 md:mr-4">
+		<figure className="container flex flex-col-reverse md:flex-row justify-evenly px-6 mx-auto mb-8 text-center">
+			<figcaption className="flex flex-col justify-center content-center md:mr-4 mb-4">
 				<h3 className="text-xl md:text-2xl">
 					A nap zárásaként hallgasd meg
 					<br />
-					<span className="text-yellow text-2xl font-semibold leading-relaxed md:text-3xl md:leading-relaxed">
+					<span className="text-2xl md:text-3xl font-semibold leading-relaxed md:leading-relaxed text-yellow">
 						Rekop György
 					</span>
 					<br />a Showder Klub humoristájának

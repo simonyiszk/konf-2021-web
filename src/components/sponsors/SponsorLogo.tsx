@@ -29,7 +29,12 @@ export default function SponsorLogo({
 		<ConditionalWrapper
 			condition={!!link}
 			wrapper={(children) => (
-				<a href={link} className={styles.link} target="_blank" rel="noopener">
+				<a
+					href={link}
+					className={styles.link}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					{children}
 				</a>
 			)}

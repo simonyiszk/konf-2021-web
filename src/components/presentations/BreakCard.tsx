@@ -32,7 +32,7 @@ const BreakCard = forwardRef<HTMLDivElement, BreakCardProps>(
 					>
 						<span
 							className={clsx(
-								"absolute top-0 hidden p-1 text-center text-blue text-lg font-semibold bg-yellow rounded-md sm:inline-block",
+								"hidden sm:inline-block absolute top-0 p-1 text-lg font-semibold text-center text-blue bg-yellow rounded-md",
 								!isLeft && "sm:hidden",
 							)}
 							style={{
@@ -51,7 +51,7 @@ const BreakCard = forwardRef<HTMLDivElement, BreakCardProps>(
 							>
 								{children}
 							</div>
-							<h5 className="col-span-2 -mt-3 mb-4 text-center text-yellow font-bold">
+							<h5 className="col-span-2 -mt-3 mb-4 font-bold text-center text-yellow">
 								{stamp(startDateObj)}-{stamp(endDateObj)}
 							</h5>
 						</div>
@@ -60,33 +60,33 @@ const BreakCard = forwardRef<HTMLDivElement, BreakCardProps>(
 				{isDouble === true && (
 					<motion.figure
 						className={clsx(
-							"z-10 grid col-span-2 grid-cols-2 content-center w-full font-Roboto",
+							"grid z-10 grid-cols-2 col-span-2 content-center w-full font-Roboto",
 						)}
 						ref={ref}
 					>
-						<div className="flex flex-col items-center sm:col-span-2">
-							<div className="mb-4 p-1 w-16 text-center text-blue text-lg font-semibold bg-yellow rounded-md">
+						<div className="flex flex-col sm:col-span-2 items-center">
+							<div className="p-1 mb-4 w-16 text-lg font-semibold text-center text-blue bg-yellow rounded-md">
 								{stamp(startDateObj)}
 							</div>
 							<div
 								className={clsx(
 									styles.content,
 									styles.underlinedH3,
-									"text-center font-semibold",
+									"font-semibold text-center",
 								)}
 							>
 								{children}
 							</div>
 						</div>
-						<div className="flex flex-col items-center sm:hidden">
-							<div className="mb-4 p-1 w-16 text-center text-blue text-lg font-semibold bg-yellow rounded-md">
+						<div className="flex sm:hidden flex-col items-center">
+							<div className="p-1 mb-4 w-16 text-lg font-semibold text-center text-blue bg-yellow rounded-md">
 								{stamp(startDateObj)}
 							</div>
 							<div
 								className={clsx(
 									styles.content,
 									styles.underlinedH3,
-									"text-center font-semibold",
+									"font-semibold text-center",
 								)}
 							>
 								{children}

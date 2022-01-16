@@ -46,6 +46,8 @@
 
 		"tailwindcss/no-custom-classname": "off",
 
+		"react/no-unstable-nested-components": ["error", { "allowAsProps": true }],
+
 		// TODO: Remove these, see airbnb/javascript#2501
 		"react/function-component-definition": [
 			"error",

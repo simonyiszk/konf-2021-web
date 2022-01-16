@@ -54,9 +54,9 @@ export async function getCmsData() {
 
 	presentations.items.sort(orderEntriesByDate);
 
-	const renderedPresentations: Array<
-		IPresentation & { mdxSource: MdxRemote.Source }
-	> = await Promise.all(
+	const renderedPresentations: (IPresentation & {
+		mdxSource: MdxRemote.Source;
+	})[] = await Promise.all(
 		presentations.items.map(async (item) => {
 			const mdxSource = await renderToString(item.fields.description);
 			// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
@@ -74,19 +74,18 @@ export async function getCmsData() {
 
 	breaks.items.sort(orderEntriesByDate);
 
-	const renderedBreaks: Array<
-		IBreak & { mdxSource: MdxRemote.Source }
-	> = await Promise.all(
-		breaks.items.map(async (item) => {
-			const mdxSource = await renderToString(item.fields.text);
-			// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
-			const r = {
-				mdxSource,
-				...item,
-			} as IBreak & { mdxSource: MdxRemote.Source };
-			return r;
-		}),
-	);
+	const renderedBreaks: (IBreak & { mdxSource: MdxRemote.Source })[] =
+		await Promise.all(
+			breaks.items.map(async (item) => {
+				const mdxSource = await renderToString(item.fields.text);
+				// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+				const r = {
+					mdxSource,
+					...item,
+				} as IBreak & { mdxSource: MdxRemote.Source };
+				return r;
+			}),
+		);
 
 	const combined = [...renderedPresentations, ...renderedBreaks];
 

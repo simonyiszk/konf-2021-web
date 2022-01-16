@@ -17,7 +17,7 @@ const Button = React.forwardRef<
 			target={target}
 			rel="noopener"
 			className={clsx(
-				"w-fit relative block col-span-2 justify-self-center mx-auto px-8 py-2 text-center text-blue font-Roboto text-3xl font-bold bg-green rounded-lg cursor-pointer",
+				"block relative col-span-2 justify-self-center py-2 px-8 mx-auto font-Roboto text-3xl font-bold text-center text-blue bg-green rounded-lg cursor-pointer w-fit",
 				styles.button,
 				className,
 			)}

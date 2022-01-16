@@ -44,7 +44,7 @@ const PresentationCard = forwardRef<HTMLDivElement, PresentationCardProps>(
 			<motion.figure className={clsx(styles.card, className)} ref={ref}>
 				<span
 					className={clsx(
-						"absolute top-0 hidden p-1 text-center text-blue text-lg font-semibold bg-yellow rounded-md sm:inline-block",
+						"hidden sm:inline-block absolute top-0 p-1 text-lg font-semibold text-center text-blue bg-yellow rounded-md",
 						!isLeft && "sm:hidden",
 					)}
 					style={{
@@ -78,7 +78,7 @@ const PresentationCard = forwardRef<HTMLDivElement, PresentationCardProps>(
 							{profession ?? "ErrNo: Profession"}
 						</h4>
 						{startDate && endDate && (
-							<h5 className="text-yellow font-bold">
+							<h5 className="font-bold text-yellow">
 								{stamp(startDateObj)}-{stamp(endDateObj)}
 							</h5>
 						)}

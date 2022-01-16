@@ -58,22 +58,22 @@ export default function Navbar() {
 			}}
 			id="header"
 		>
-			<div className="relative flex flex-wrap items-center justify-start mx-auto px-2 w-full sm:px-8">
-				<div className="relative flex justify-between w-full sm:static sm:block sm:justify-start sm:w-auto">
+			<div className="flex relative flex-wrap justify-start items-center px-2 sm:px-8 mx-auto w-full">
+				<div className="flex sm:block relative sm:static justify-between sm:justify-start w-full sm:w-auto">
 					<span
-						className="flex items-center mr-4 no-underline text-2xl cursor-pointer lg:text-4xl lg:leading-10"
+						className="flex items-center mr-4 text-2xl lg:text-4xl lg:leading-10 no-underline cursor-pointer"
 						onClick={homeButton}
 						onKeyPress={homeButton}
 						role="button"
 						tabIndex={0}
 					>
-						<span className="relative inline-block mx-2 my-4 w-12 h-12">
+						<span className="inline-block relative my-4 mx-2 w-12 h-12">
 							<Image src="/18.svg" layout="fill" />
 						</span>
 					</span>
 
 					<button
-						className="block px-3 py-2 text-xl leading-none bg-transparent border border-solid border-transparent rounded outline-none focus:outline-none cursor-pointer sm:hidden"
+						className="block sm:hidden py-2 px-3 text-xl leading-none bg-transparent rounded border border-transparent border-solid cursor-pointer outline-none focus:outline-none"
 						type="button"
 						onClick={() => setNavbarOpen(!isNavbarOpen)}
 						aria-label="Navbar toggler"
@@ -83,20 +83,20 @@ export default function Navbar() {
 				</div>
 				<nav
 					className={clsx(
-						"z-50 items-center w-full sm:flex sm:w-auto",
+						"sm:flex z-50 items-center w-full sm:w-auto",
 						isNavbarOpen ? "flex" : "hidden",
 					)}
 				>
-					<ul className="flex flex-col w-full rounded-lg list-none sm:flex-row sm:ml-auto sm:w-auto">
+					<ul className="flex flex-col sm:flex-row sm:ml-auto w-full sm:w-auto list-none rounded-lg">
 						{navbarContent.links.map(({ href, label }, i) => (
-							<li key={`${href}`} className="pl-2 py-1 w-full sm:pl-0">
+							<li key={`${href}`} className="py-1 pl-2 sm:pl-0 w-full">
 								<Link href={href} passHref>
 									<motion.a
 										role="link"
 										tabIndex={i}
 										className={clsx(
 											styles.navlink,
-											"hover:text-pink inline-block px-2 py-2 w-full text-xl font-normal cursor-pointer lowercase sm:px-5 sm:text-2xl",
+											"inline-block py-2 px-2 sm:px-5 w-full text-xl sm:text-2xl font-normal lowercase cursor-pointer hover:text-pink",
 											i === 0 && "sm:pl-2",
 											i === navbarContent.links.length - 1 && "sm:pr-2",
 										)}

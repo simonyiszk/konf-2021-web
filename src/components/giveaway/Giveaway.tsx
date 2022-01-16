@@ -7,7 +7,7 @@ import styles from "./Giveaway.module.scss";
 export default function Giveaway() {
 	return (
 		<section
-			className="scroll-margin container mb-8 mx-auto px-6 text-center"
+			className="container px-6 mx-auto mb-8 text-center scroll-margin"
 			id="nyeremenyjatek"
 		>
 			<h2 className="mb-8 text-4xl font-semibold">Nyereményjáték</h2>
@@ -24,7 +24,7 @@ export default function Giveaway() {
 				Az előadásokon való kérdezésért további értékes nyereményekkel
 				gazdagodhatsz!
 			</h4>
-			<div className="flex flex-wrap items-center justify-evenly p-4 px-1 w-full">
+			<div className="flex flex-wrap justify-evenly items-center p-4 px-1 w-full">
 				<div>
 					<Image
 						src="/assets/images/monitor_2000.gif"

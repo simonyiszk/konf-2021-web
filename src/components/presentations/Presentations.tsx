@@ -15,10 +15,10 @@ import PresentationCard from "./PresentationCard";
 import styles from "./Presentations.module.scss";
 
 type PresentationsProps = {
-	presentations: Array<
+	presentations: (
 		| (IPresentation & { mdxSource: MdxRemote.Source })
 		| (IBreak & { mdxSource: MdxRemote.Source })
-	>;
+	)[];
 };
 
 export default function Presentations({ presentations }: PresentationsProps) {
@@ -74,12 +74,12 @@ export default function Presentations({ presentations }: PresentationsProps) {
 
 	return (
 		<section className={clsx(styles.section, "scroll-margin")} id="eloadasok">
-			<h2 className="mb-8 text-center text-4xl font-semibold">Előadások</h2>
-			<div className="mb-10 text-center text-2xl">
+			<h2 className="mb-8 text-4xl font-semibold text-center">Előadások</h2>
+			<div className="mb-10 text-2xl text-center">
 				<p>Az előadások idén online lesznek közvetítve.</p>
 				<p>A platformot a Regisztráció gombra kattintva lehet elérni.</p>
 			</div>
-			<div className="sticky z-20 top-24 flex flex-row justify-evenly rounded-b-md xl:static">
+			<div className="flex sticky xl:static top-24 z-20 flex-row justify-evenly rounded-b-md">
 				<button
 					className={clsx(
 						styles.button,
@@ -115,7 +115,7 @@ export default function Presentations({ presentations }: PresentationsProps) {
 				<div
 					className={clsx(
 						styles.container,
-						"relative grid gap-8 gap-x-8 grid-cols-2 justify-items-center mb-8 mt-8 mx-auto sm:gap-16 sm:gap-x-32",
+						"grid relative grid-cols-2 gap-8 sm:gap-16 gap-x-8 sm:gap-x-32 justify-items-center mx-auto mt-8 mb-8",
 					)}
 				>
 					<div className={styles.timeline} />
@@ -177,11 +177,11 @@ export default function Presentations({ presentations }: PresentationsProps) {
 						}
 						return null;
 					})}
-					<div className="grid col-span-2 grid-cols-2 justify-items-center w-full">
-						<div className="z-10 -mb-4 p-1 w-16 text-center text-blue text-lg font-semibold bg-yellow rounded-md sm:col-span-2">
+					<div className="grid grid-cols-2 col-span-2 justify-items-center w-full">
+						<div className="z-10 sm:col-span-2 p-1 -mb-4 w-16 text-lg font-semibold text-center text-blue bg-yellow rounded-md">
 							18:00
 						</div>
-						<div className="z-10 -mb-4 p-1 w-16 text-center text-blue text-lg font-semibold bg-yellow rounded-md sm:hidden">
+						<div className="sm:hidden z-10 p-1 -mb-4 w-16 text-lg font-semibold text-center text-blue bg-yellow rounded-md">
 							18:00
 						</div>
 					</div>

@@ -14,7 +14,7 @@ export default function Organizer({
 	const textColor = `text-${color}`;
 
 	return (
-		<div className="flex flex-col items-center mb-10 px-10 space-y-3">
+		<div className="flex flex-col items-center px-10 mb-10 space-y-3">
 			<div className={clsx(bgColor, "p-2 rounded-full")}>
 				<div className="block p-2 w-56 h-56 bg-blue rounded-full">
 					<Image
