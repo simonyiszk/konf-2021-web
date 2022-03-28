@@ -18,13 +18,13 @@ export default function Layout({
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<meta
 					name="description"
-					content="Magyarország legnagyobb egyetemi hallgatók által szervezett éves technológiai konferenciája. Várunk Téged is április 14-én!"
+					content="Magyarország legnagyobb egyetemi hallgatók által szervezett éves technológiai konferenciája. Várunk Téged is 2021 április 14-én!"
 				/>
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:title" content="18. Simonyi Konferencia" />
 				<meta
 					name="twitter:description"
-					content="Magyarország legnagyobb egyetemi hallgatók által szervezett éves technológiai konferenciája. Várunk Téged is április 14-én!"
+					content="Magyarország legnagyobb egyetemi hallgatók által szervezett éves technológiai konferenciája. Várunk Téged is 2021 április 14-én!"
 				/>
 				<meta
 					name="twitter:image"
@@ -41,7 +41,7 @@ export default function Layout({
 				<meta property="og:title" content="18. Simonyi Konferencia" />
 				<meta
 					property="og:description"
-					content="Magyarország legnagyobb egyetemi hallgatók által szervezett éves technológiai konferenciája. Várunk Téged is április 14-én!"
+					content="Magyarország legnagyobb egyetemi hallgatók által szervezett éves technológiai konferenciája. Várunk Téged is 2021 április 14-én!"
 				/>
 				<meta property="og:url" content="https://2021.konferencia.simonyi.bme.hu" />
 				<meta property="og:type" content="website" />
