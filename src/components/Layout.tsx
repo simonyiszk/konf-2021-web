@@ -28,22 +28,22 @@ export default function Layout({
 				/>
 				<meta
 					name="twitter:image"
-					content="https://konferencia.simonyi.bme.hu/preview.png"
+					content="https://2021.konferencia.simonyi.bme.hu/preview.png"
 				/>
 				<meta
 					name="thumbnail"
-					content="https://konferencia.simonyi.bme.hu/preview.png"
+					content="https://2021.konferencia.simonyi.bme.hu/preview.png"
 				/>
 				<meta
 					property="og:image"
-					content="https://konferencia.simonyi.bme.hu/preview.png"
+					content="https://2021.konferencia.simonyi.bme.hu/preview.png"
 				/>
 				<meta property="og:title" content="18. Simonyi Konferencia" />
 				<meta
 					property="og:description"
 					content="Magyarország legnagyobb egyetemi hallgatók által szervezett éves technológiai konferenciája. Várunk Téged is április 14-én!"
 				/>
-				<meta property="og:url" content="https://konferencia.simonyi.bme.hu" />
+				<meta property="og:url" content="https://2021.konferencia.simonyi.bme.hu" />
 				<meta property="og:type" content="website" />
 				<link
 					rel="apple-touch-icon"
