@@ -40,11 +40,11 @@
 		"autoprefixer": "^10.2.5",
 		"babel-plugin-optimize-clsx": "^2.6.1",
 		"clsx": "^1.1.1",
-		"contentful": "^8.2.1",
-		"contentful-management": "^7.13.1",
+		"contentful": "^11.9.0",
+		"contentful-management": "^11.63.1",
 		"dotenv": "^8.2.0",
 		"framer-motion": "3.3.0",
-		"next": "^12.0.8",
+		"next": "^14.2.32",
 		"next-compose-plugins": "^2.2.1",
 		"next-mdx-remote": "^2.1.3",
 		"next-seo": "^4.23.0",
@@ -60,7 +60,7 @@
 		"shx": "^0.3.3",
 		"tailwindcss": "^2.0.4",
 		"tinydate": "^1.3.0",
-		"typescript-plugin-css-modules": "^3.2.0"
+		"typescript-plugin-css-modules": "^5.2.0"
 	},
 	"devDependencies": {
 		"@next/eslint-plugin-next": "^12.0.7",
