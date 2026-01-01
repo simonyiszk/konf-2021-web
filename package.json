@@ -41,7 +41,7 @@
 		"babel-plugin-optimize-clsx": "^2.6.1",
 		"clsx": "^1.1.1",
 		"contentful": "^8.2.1",
-		"contentful-management": "^7.13.1",
+		"contentful-management": "^11.63.1",
 		"dotenv": "^8.2.0",
 		"framer-motion": "3.3.0",
 		"next": "^12.0.8",
